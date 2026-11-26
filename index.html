@@ -6,6 +6,9 @@
 <title>Family Life</title>
 <meta name="theme-color" content="#2c7d5b">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.gstatic.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src [https://*.googleapis.com]https://*.googleapis.com [https://*.firebaseio.com]https://*.firebaseio.com https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com; base-uri 'none'; form-action 'none'">
 <style>
 :root{--bg:#faf7f2;--card:#fff;--tx:#1a2230;--mu:#4f5b6d;--ln:#d6cfc2;--ac:#2c7d5b;--fs:18px;color-scheme:light dark}
@@ -17,6 +20,9 @@ header{position:sticky;top:env(safe-area-inset-top,0);z-index:5;background:var(-
 .w,main{max-width:42rem;margin:0 auto}
 main{padding:.4rem 1rem 6rem}
 .row{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.brand{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;margin-bottom:.35rem}
+.brand img{width:2.8rem;height:2.8rem;border-radius:.75rem;object-fit:cover;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.brand span{font-size:.8rem;font-weight:800;letter-spacing:.03em;color:var(--ac);margin-top:.15rem}
 h1{font-size:1.3rem;margin:0}h2{font-size:1.1rem;margin:1rem 0 .5rem}
 small,.mu{color:var(--mu)}
 .btn{min-height:2.6rem;padding:.35rem .8rem;border-radius:.9rem;border:2px solid var(--ln);background:var(--card);color:var(--tx);font:inherit;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:.3rem}
@@ -42,6 +48,7 @@ label{display:block;font-weight:700;margin:.6rem 0 .2rem;font-size:.9rem}
 input,select,textarea{width:100%;min-height:2.8rem;padding:.4rem .7rem;border-radius:.85rem;border:2px solid var(--ln);background:var(--card);color:var(--tx);font:inherit}
 input[type=checkbox]{width:1.3rem;min-height:0;height:1.3rem}
 .gate{position:fixed;inset:0;z-index:50;background:var(--bg);overflow:auto;padding:1rem}
+.gate-logo{width:4.5rem;height:4.5rem;border-radius:1.1rem;display:block;margin:0 auto .6rem;object-fit:cover;box-shadow:0 3px 10px rgba(0,0,0,.15)}
 .code{font-size:.95rem;font-weight:800;letter-spacing:.08em;word-break:break-all;user-select:all}
 #toast{position:fixed;left:.7rem;right:.7rem;bottom:5rem;z-index:60;pointer-events:none;display:flex;justify-content:center}
 .t{background:#16201b;color:#fff;padding:.75rem 1rem;border-radius:.9rem;font-weight:700;display:flex;align-items:center;gap:.8rem;pointer-events:auto;box-shadow:0 4px 14px rgba(0,0,0,.35);max-width:36rem;width:100%;justify-content:space-between}
@@ -51,6 +58,7 @@ input[type=checkbox]{width:1.3rem;min-height:0;height:1.3rem}
 </head>
 <body>
 <header><div class="w">
+ <div class="brand"><img src="icon-192.png" alt="Logo Family Life"><span>Family Life</span></div>
  <div class="row"><div><small id="dt"></small><h1 id="hi">Ciao</h1></div>
   <div class="row" style="gap:.35rem">
    <button class="btn sm" data-act="font" aria-label="Dimensione testo" title="Dimensione testo">Aa</button>
@@ -76,19 +84,9 @@ input[type=checkbox]{width:1.3rem;min-height:0;height:1.3rem}
 "use strict";
 window.FL_FIREBASE_CONFIG={apiKey:"AIzaSyCJL-BjXC7lZdZOeJTGPHDH--D6Twi7iPM",authDomain:"family-life-91f40.firebaseapp.com",projectId:"family-life-91f40",storageBucket:"family-life-91f40.firebasestorage.app",messagingSenderId:"7205389097",appId:"1:7205389097:web:8b246055f2af2cb7bfed38"};
 
-// Manifest dinamico & Service Worker inline per supporto PWA installabile e offline
-(function initPwa(){
-  try{
-    const iconSvg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect width="128" height="128" rx="28" fill="#2c7d5b"/><text x="64" y="84" font-size="64" text-anchor="middle">🏡</text></svg>`;
-    const iconUrl="data:image/svg+xml,"+encodeURIComponent(iconSvg);
-    const man={name:"Family Life",short_name:"Family Life",start_url:location.pathname||"./",display:"standalone",background_color:"#faf7f2",theme_color:"#2c7d5b",icons:[{src:iconUrl,sizes:"192x192",type:"image/svg+xml"},{src:iconUrl,sizes:"512x512",type:"image/svg+xml"}]};
-    const link=document.createElement("link");link.rel="manifest";link.href=URL.createObjectURL(new Blob([JSON.stringify(man)],{type:"application/manifest+json"}));document.head.appendChild(link);
-  }catch(e){}
-  if("serviceWorker" in navigator&&location.protocol==="https:"){
-    const swCode=`const C="fl-cache-v1";self.addEventListener("install",e=>{self.skipWaiting()});self.addEventListener("activate",e=>{e.waitUntil(self.clients.claim())});self.addEventListener("fetch",e=>{if(e.request.method!=="GET")return;e.respondWith(fetch(e.request).then(r=>{if(r&&r.status===200&&r.type==="basic"){const cl=r.clone();caches.open(C).then(c=>c.put(e.request,cl))}return r}).catch(()=>caches.match(e.request)))});self.addEventListener("notificationclick",e=>{e.notification.close();e.waitUntil(clients.matchAll({type:"window"}).then(cs=>{for(const c of cs)if("focus" in c)return c.focus();if(clients.openWindow)return clients.openWindow("./")}))});`;
-    try{const swUrl=URL.createObjectURL(new Blob([swCode],{type:"application/javascript"}));navigator.serviceWorker.register(swUrl).catch(()=>{})}catch(e){}
-  }
-})();
+if("serviceWorker" in navigator&&location.protocol==="https:"){
+  navigator.serviceWorker.register("sw.js").catch(()=>{});
+}
 
 const subs=t=>String(t).split("\n").map(l=>l.trim()).filter(Boolean).slice(0,30).map(l=>{const m=l.match(/^((?:\p{Extended_Pictographic}\uFE0F?\u200D?)+)\s*(.+)$/u);return m?{i:m[1],n:m[2].slice(0,30)}:{i:"",n:l.slice(0,30)}});
 const safeColor=c=>/^#[0-9a-f]{6}$/i.test(c)?c:"#64748b";
@@ -118,7 +116,6 @@ async function hashPin(pin,saltHex){
 }
 const checkPin=async(pin,st)=>!!st&&(await hashPin(pin,st.split(":")[0]))===st;
 
-// Stato sincronizzato (SYNC) + stato locale
 const SYNC=["owner","members","items","shop","act","cats","pay","trash","updatedAt"];
 const K="family_life_v2";
 const seed=()=>({code:"",owner:"",members:[],items:[],shop:[],act:[],cats:DEF(),pay:[],trash:[],updatedAt:0,me:"",reg:false,out:false,consentAt:0,fsIdx:0});
@@ -138,7 +135,6 @@ function save(skipRemote){
 }
 const pick=r=>Object.fromEntries(SYNC.filter(k=>k in r).map(k=>[k,r[k]]));
 
-// Unione intelligente per ridurre conflitti concorrenti da remoto
 function mergeRemote(rem){
   const mergeById=(locArr,remArr,delIds=new Set())=>{
     const map=new Map();
@@ -173,8 +169,8 @@ function purge(){
   S.items=S.items.filter(i=>!(i.done&&i.doneAt&&n-i.doneAt>15*864e5));
   S.shop=S.shop.filter(x=>!x.done||n-x.at<62*864e5);
   S.act=S.act.slice(0,30);
-  S.trash=S.trash.filter(i=>n-i.del<16*864e5); // cestino: 16 giorni (15 + 1)
-  S.pay=S.pay.filter(p=>{const d=new Date(p.at);return n<new Date(d.getFullYear(),d.getMonth()+2,2).getTime()}); // archivio: mese successivo + 1 giorno
+  S.trash=S.trash.filter(i=>n-i.del<16*864e5);
+  S.pay=S.pay.filter(p=>{const d=new Date(p.at);return n<new Date(d.getFullYear(),d.getMonth()+2,2).getTime()});
 }
 purge();
 
@@ -187,7 +183,6 @@ const byDate=(a,b)=>a.done===b.done?a.date.localeCompare(b.date):(a.done?1:-1);
 const f2=v=>"€ "+Number(v||0).toFixed(2).replace(".",",");
 let tab="a",view=null,cy=today().getFullYear(),cm=today().getMonth(),calSel=off(0);
 
-// Toast con supporto pulsante "Annulla" (Undo)
 let tt,undoFn=null;
 function toast(m,onUndo){
   undoFn=typeof onUndo==="function"?onUndo:null;
@@ -205,15 +200,14 @@ async function notify(t,b){
   if(!("Notification" in window)||Notification.permission!=="granted")return;
   try{
     const reg=navigator.serviceWorker&&await navigator.serviceWorker.getRegistration();
-    if(reg&&reg.showNotification)await reg.showNotification(t,{body:b,tag:"fl-"+Date.now()});
-    else new Notification(t,{body:b});
+    if(reg&&reg.showNotification)await reg.showNotification(t,{body:b,icon:"icon-192.png",tag:"fl-"+Date.now()});
+    else new Notification(t,{body:b,icon:"icon-192.png"});
   }catch(e){}
 }
 function logAct(t){S.act.unshift({k:uid("a"),by:me().name,t,at:Date.now()})}
 const mk=t=>{const d=new Date(t);return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")};
 function addPay(cid,t,a){const p={id:uid("p"),by:me().name,cat:cid,t,a,at:Date.now(),modAt:Date.now()};S.pay.unshift(p);return p.id}
 
-// Preserva anche una sottocategoria personalizzata/vecchia se non più in elenco
 function subOpts(cid,sel){
   const list=cat(cid).s;
   const has=sel&&list.some(x=>x.n===sel);
@@ -349,13 +343,14 @@ function openDlg(v){view=v;drawDlg();if(!$("dlg").open)$("dlg").showModal()}
 
 function gate(){
   const g=$("gate"),inv=location.hash.match(/^#invito-([A-Z2-9]{26})$/i);
+  const logoHtml=`<img src="icon-192.png" alt="Logo Family Life" class="gate-logo">`;
   if(!S.reg){
-    g.innerHTML=`<div class="w"><h1 style="text-align:center">Benvenuto in Family Life</h1>`+(inv
+    g.innerHTML=`<div class="w">${logoHtml}<h1 style="text-align:center">Benvenuto in Family Life</h1>`+(inv
      ?`<p class="mu" style="text-align:center">Sei stato invitato in una famiglia.</p><form data-form="join"><input type="hidden" name="code" value="${esc(inv[1].toUpperCase())}"><label>Nome<input name="nm" required maxlength="30"></label><label>Età<input name="ag" type="number" min="14" max="95" required></label><label>PIN (4-8 numeri)<input name="pin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" required></label>${CONSENT}<button class="btn pri" style="width:100%;margin-top:1rem">Entra ✓</button></form>`
      :`<p class="mu" style="text-align:center">Crea la tua famiglia come amministratore.</p><form data-form="greg"><label>Il tuo nome<input name="nm" required maxlength="30"></label><label>Età<input name="ag" type="number" min="14" max="95" required></label><label>PIN (4-8 numeri)<input name="pin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" required></label>${CONSENT}<button class="btn pri" style="width:100%;margin-top:1rem">Crea famiglia</button></form><details style="margin-top:1rem"><summary class="btn" style="text-align:center">🔑 Ho un codice famiglia</summary><form data-form="join"><label>Codice famiglia<input name="code" required maxlength="26" minlength="26" autocapitalize="characters" style="text-transform:uppercase"></label><label>Nome<input name="nm" required maxlength="30"></label><label>Età<input name="ag" type="number" min="14" max="95" required></label><label>PIN (4-8 numeri)<input name="pin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" required></label>${CONSENT}<button class="btn pri" style="width:100%;margin-top:1rem">Entra ✓</button></form></details>`)+`</div>`;
     g.hidden=false;
   }else if(S.out){
-    g.innerHTML=`<div class="w"><h1 style="text-align:center">Accedi</h1><form data-form="glogin"><label>Nome<input name="nm" required maxlength="30"></label><label>PIN<input name="pin" type="password" inputmode="numeric" maxlength="8" required></label><button class="btn pri" style="width:100%;margin-top:1rem">Entra</button></form></div>`;
+    g.innerHTML=`<div class="w">${logoHtml}<h1 style="text-align:center">Accedi</h1><form data-form="glogin"><label>Nome<input name="nm" required maxlength="30"></label><label>PIN<input name="pin" type="password" inputmode="numeric" maxlength="8" required></label><button class="btn pri" style="width:100%;margin-top:1rem">Entra</button></form></div>`;
     g.hidden=false;
   }else g.hidden=true;
 }
@@ -517,7 +512,6 @@ document.addEventListener("submit",async e=>{
 const clock=()=>{
   const n=new Date();
   $("dt").textContent=n.toLocaleDateString("it-IT",{weekday:"long",day:"numeric",month:"long"})+" · "+n.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"});
-  // Aggiorna giorno selezionato al passaggio della mezzanotte
   const curDay=off(0);
   if(curDay!==lastDayStr){
     if(calSel===lastDayStr)calSel=curDay;
@@ -562,4 +556,3 @@ try{
 </script>
 </body>
 </html>
-
