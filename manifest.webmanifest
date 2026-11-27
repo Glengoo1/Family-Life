@@ -1,32 +1,24 @@
 {
- "name": "Family Life",
- "short_name": "Family Life",
- "description": "App di vita familiare: scadenze, spesa, salute e compiti.",
- "lang": "it",
- "start_url": "./",
- "scope": "./",
- "display": "standalone",
- "orientation": "portrait",
- "background_color": "#faf7f2",
- "theme_color": "#2c7d5b",
- "icons": [
-  {
-   "src": "icon-192.png",
-   "sizes": "192x192",
-   "type": "image/png",
-   "purpose": "any"
-  },
-  {
-   "src": "icon-512.png",
-   "sizes": "512x512",
-   "type": "image/png",
-   "purpose": "any"
-  },
-  {
-   "src": "icon-maskable-512.png",
-   "sizes": "512x512",
-   "type": "image/png",
-   "purpose": "maskable"
-  }
- ]
+  "name": "Family Life",
+  "short_name": "Family Life",
+  "description": "Agenda familiare condivisa, promemoria, lista spesa e pagamenti.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4efe6",
+  "theme_color": "#2d7a5e",
+  "lang": "it",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
 }
