@@ -70,56 +70,67 @@ html[data-theme="dark"]{
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{font-size:var(--fs);-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--tx);font:400 1rem/1.42 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
-header{position:sticky;top:env(safe-area-inset-top,0);z-index:5;background:color-mix(in srgb,var(--bg) 92%,var(--card));backdrop-filter:blur(8px);border-bottom:1.5px solid var(--ln);padding:.36rem .75rem .42rem}
-.w,main{max-width:42rem;margin:0 auto}
-main{padding:.4rem .9rem 6.5rem}
-.row{display:flex;align-items:center;justify-content:space-between;gap:.45rem}
-.top-head{display:flex;align-items:flex-start;justify-content:space-between;gap:.45rem}
-.brand-btn{display:inline-flex;align-items:center;gap:.44rem;margin-bottom:.16rem;padding:.12rem .34rem .12rem .12rem;border-radius:.82rem;border:1px solid transparent;background:transparent;color:var(--tx);font:inherit;cursor:pointer;text-align:left;transition:background .15s ease,border-color .15s ease,transform .12s ease}
-.brand-btn:hover,.brand-btn:focus-visible{background:color-mix(in srgb,var(--ac) 11%,var(--card));border-color:color-mix(in srgb,var(--ac) 35%,var(--ln))}
-.brand-btn:active{transform:scale(.98)}
-.fl-logo{width:2.35rem;height:2.35rem;border-radius:.68rem;object-fit:cover;border:1.5px solid var(--ln);box-shadow:0 2px 6px rgba(45,32,20,.1);flex:none}
-.fl-name{font-size:.9rem;font-weight:800;letter-spacing:-.01em;color:var(--tx);line-height:1.12}
-.top-right{display:flex;flex-direction:column;align-items:flex-end;gap:.26rem}
-.icon-pair{display:inline-flex;align-items:center;gap:.35rem}
-.mini-controls{display:inline-flex;align-items:center;justify-content:flex-end;gap:.35rem;flex-wrap:wrap}
-.mid-strip{display:flex;align-items:center;justify-content:space-between;gap:.45rem;flex-wrap:wrap;margin-top:.22rem}
-h1{font-size:1.34rem;line-height:1.15;margin:0;font-weight:800;letter-spacing:-.02em}
-h2{font-size:1.08rem;margin:.78rem 0 .42rem;font-weight:800}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 1rem/1.36 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
+header{position:sticky;top:env(safe-area-inset-top,0);z-index:5;background:color-mix(in srgb,var(--bg) 94%,var(--card));backdrop-filter:blur(8px);border-bottom:1.5px solid var(--ln);padding:.26rem .65rem .32rem}
+.w,main{max-width:44rem;margin:0 auto}
+main{padding:.28rem .8rem 6.2rem}
+.row{display:flex;align-items:center;justify-content:space-between;gap:.4rem}
+
+.top-head{display:flex;align-items:flex-start;justify-content:space-between;gap:.35rem}
+.brand-left{display:flex;align-items:flex-start;gap:.42rem;min-width:0;flex:1}
+.brand-btn{display:inline-flex;flex-direction:column;align-items:center;gap:.08rem;padding:.14rem .24rem;border-radius:.78rem;border:1px solid var(--ln);background:var(--card);color:var(--tx);font:inherit;cursor:pointer;flex:none;box-shadow:0 1px 4px rgba(45,32,20,.06)}
+.brand-btn:hover,.brand-btn:focus-visible{background:color-mix(in srgb,var(--ac) 10%,var(--card))}
+.fl-logo{width:2.35rem;height:2.35rem;border-radius:.62rem;object-fit:cover;flex:none}
+.fl-name{font-size:.66rem;font-weight:800;letter-spacing:-.01em;color:var(--tx);line-height:1}
+.greet-col{min-width:0;flex:1}
+.dt-line{display:block;font-size:.68rem;line-height:1.15;letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.top-right{display:flex;flex-direction:column;align-items:flex-end;gap:.2rem;flex:none}
+.icon-pair{display:inline-flex;align-items:center;gap:.28rem}
+.mini-controls{display:inline-flex;align-items:center;justify-content:flex-end;gap:.28rem;flex-wrap:wrap}
+.mid-strip{display:flex;align-items:center;justify-content:space-between;gap:.35rem;flex-wrap:wrap;margin-top:.14rem}
+.stxt-line{font-size:.68rem;line-height:1.15}
+
+h1{font-size:1.12rem;line-height:1.12;margin:.08rem 0 0;font-weight:800;letter-spacing:-.02em}
+h2{font-size:.98rem;margin:.35rem 0 .22rem;font-weight:800;line-height:1.18}
 small,.mu{color:var(--mu)}
-.cat-line{display:inline-block;font-size:.84rem;font-weight:700;line-height:1.35;color:color-mix(in srgb,var(--tx) 84%,var(--mu));margin-bottom:.12rem}
-.cat-lbl{font-size:.94rem;font-weight:800;margin:.48rem 0 .18rem}
-.btn{min-height:2.45rem;padding:.3rem .78rem;border-radius:999px;border:1.5px solid var(--ln);background:var(--card);color:var(--tx);font:inherit;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:.35rem;box-shadow:0 1px 2px rgba(45,32,20,.04)}
-.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,.day:focus-visible,.chk:focus-visible,.dn-switch:focus-visible,.wheel-item:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.cat-line{display:inline-block;font-size:.76rem;font-weight:700;line-height:1.25;color:color-mix(in srgb,var(--tx) 84%,var(--mu));margin-bottom:.06rem}
+
+.btn{min-height:2.15rem;padding:.2rem .62rem;border-radius:999px;border:1.5px solid var(--ln);background:var(--card);color:var(--tx);font:inherit;font-size:.86rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:.28rem;box-shadow:0 1px 2px rgba(45,32,20,.04)}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,.day:focus-visible,.chk:focus-visible,.dn-switch:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
 .pri{background:var(--ac);color:#fffaf2;border-color:var(--ac)}
 .sec{background:color-mix(in srgb,var(--ac2) 12%,var(--card));color:var(--ac2);border-color:color-mix(in srgb,var(--ac2) 55%,var(--ln))}
-.sub-actions{display:grid;gap:.55rem;margin-top:.85rem}
-.sub-actions .btn{min-height:2.3rem;font-size:.92rem}
-.link-btn{background:none;border:0;color:var(--ac);font:inherit;font-size:.9rem;font-weight:700;cursor:pointer;padding:.35rem .2rem;text-decoration:underline}
+.sub-actions{display:grid;gap:.5rem;margin-top:.8rem}
+.sub-actions .btn{min-height:2.2rem;font-size:.88rem}
+.link-btn{background:none;border:0;color:var(--ac);font:inherit;font-size:.84rem;font-weight:700;cursor:pointer;padding:.3rem .2rem;text-decoration:underline}
 .dng{color:#c95648;border-color:color-mix(in srgb,#c95648 65%,var(--ln))}
 .on{background:var(--pill-on);color:var(--pill-on-tx);border-color:var(--pill-on)}
-.sm{min-height:2.1rem;font-size:.82rem;padding:.16rem .6rem}
-.stay-row{display:flex;align-items:center;gap:.55rem;margin-top:.65rem;padding:.5rem .7rem;border-radius:.85rem;border:1.5px solid var(--ln);background:var(--card);cursor:pointer;font-size:.9rem;font-weight:700}
-.quick-dates{display:flex;flex-wrap:wrap;gap:.32rem;margin-top:.35rem}
+.sm{min-height:1.78rem;font-size:.74rem;padding:.1rem .5rem}
+.stay-row{display:flex;align-items:center;gap:.55rem;margin-top:.65rem;padding:.45rem .65rem;border-radius:.85rem;border:1.5px solid var(--ln);background:var(--card);cursor:pointer;font-size:.86rem;font-weight:700}
+.quick-dates{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.32rem}
 
-.icon-btn{position:relative;width:2.35rem;height:2.35rem;min-height:2.35rem;padding:0;border-radius:.85rem;border:1.5px solid var(--ln);background:var(--card);color:var(--tx);font-size:1.05rem;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(45,32,20,.06)}
-.badge-num{position:absolute;bottom:.08rem;right:.16rem;font-size:.64rem;font-weight:900;line-height:1;color:#c95648;background:var(--card);border-radius:999px;padding:0 .16rem}
+.icon-btn{position:relative;width:2rem;height:2rem;min-height:2rem;padding:0;border-radius:.72rem;border:1.5px solid var(--ln);background:var(--card);color:var(--tx);font-size:.92rem;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 1px 2px rgba(45,32,20,.06)}
+.badge-num{position:absolute;bottom:.04rem;right:.1rem;font-size:.58rem;font-weight:900;line-height:1;color:#c95648;background:var(--card);border-radius:999px;padding:0 .12rem}
 
-.dn-wrap{display:inline-flex;align-items:center;gap:.35rem;min-height:1.95rem;padding:.1rem .45rem;border-radius:999px;border:1.5px solid var(--ln);background:var(--card)}
-.dn-label{display:inline-flex;align-items:center;gap:.22rem;font-size:.78rem;font-weight:700;color:var(--tx);white-space:nowrap}
-.dn-switch{position:relative;width:2rem;height:1.12rem;min-height:1.12rem;padding:0;border:0;border-radius:999px;background:var(--sw-track);cursor:pointer;flex:none;transition:background .2s ease}
+.dn-wrap{display:inline-flex;align-items:center;gap:.26rem;min-height:1.68rem;padding:.06rem .38rem;border-radius:999px;border:1.5px solid var(--ln);background:var(--card)}
+.dn-label{display:inline-flex;align-items:center;gap:.18rem;font-size:.7rem;font-weight:700;color:var(--tx);white-space:nowrap}
+.dn-switch{position:relative;width:1.75rem;height:.98rem;min-height:.98rem;padding:0;border:0;border-radius:999px;background:var(--sw-track);cursor:pointer;flex:none;transition:background .2s ease}
 .dn-switch[aria-checked="true"]{background:var(--sw-on)}
-.dn-switch::before{content:"";position:absolute;top:.12rem;left:.12rem;width:.88rem;height:.88rem;border-radius:999px;background:var(--sw-knob);border:1.5px solid var(--sw-ring);box-sizing:border-box;transition:transform .2s cubic-bezier(.22,1,.36,1),border-color .2s ease;box-shadow:0 1px 2px rgba(0,0,0,.16)}
-.dn-switch[aria-checked="true"]::before{transform:translateX(.88rem)}
+.dn-switch::before{content:"";position:absolute;top:.1rem;left:.1rem;width:.78rem;height:.78rem;border-radius:999px;background:var(--sw-knob);border:1.5px solid var(--sw-ring);box-sizing:border-box;transition:transform .2s cubic-bezier(.22,1,.36,1),border-color .2s ease;box-shadow:0 1px 2px rgba(0,0,0,.16)}
+.dn-switch[aria-checked="true"]::before{transform:translateX(.77rem)}
 
-.age-cycle-btn{min-height:1.95rem;padding:.1rem .55rem;border-radius:999px;border:1.5px solid var(--ln);background:var(--card);color:var(--tx);font:inherit;font-size:.78rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:.24rem;white-space:nowrap}
+.age-cycle-btn{min-height:1.68rem;padding:.06rem .46rem;border-radius:999px;border:1.5px solid var(--ln);background:var(--card);color:var(--tx);font:inherit;font-size:.7rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:.2rem;white-space:nowrap}
 
-.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:.32rem;margin-top:.28rem}
-.tabs .btn{border-radius:.8rem;font-size:.82rem;padding:.24rem .25rem;min-height:2.25rem}
-.chips{display:flex;flex-wrap:wrap;gap:.32rem;margin:.2rem 0}
-.box,.card{background:var(--card);border:1.5px solid var(--ln);border-radius:1.1rem;padding:.75rem;margin-bottom:.6rem;box-shadow:0 1px 3px rgba(45,32,20,.03)}
-.card{display:flex;align-items:center;gap:.7rem;background:color-mix(in srgb,var(--c,var(--ln)) 14%,var(--card));border-color:color-mix(in srgb,var(--c,var(--ln)) 42%,var(--ln))}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:.26rem;margin-top:.22rem}
+.tabs .btn{border-radius:.7rem;font-size:.74rem;padding:.16rem .2rem;min-height:1.95rem}
+.chips{display:flex;flex-wrap:wrap;gap:.26rem;margin:.12rem 0}
+
+.due-strip{display:flex;align-items:center;justify-content:space-between;gap:.35rem;flex-wrap:wrap;margin:.18rem 0 .34rem;padding:.24rem .42rem;border-radius:.8rem;background:color-mix(in srgb,var(--card) 82%,var(--bg));border:1px solid var(--ln)}
+.due-title-grp{display:inline-flex;align-items:center;gap:.3rem;min-width:0}
+.due-filter-grp{display:inline-flex;align-items:center;gap:.26rem}
+
+.box,.card{background:var(--card);border:1.5px solid var(--ln);border-radius:1rem;padding:.58rem .68rem;margin-bottom:.46rem;box-shadow:0 1px 2px rgba(45,32,20,.03)}
+.card{display:flex;align-items:center;gap:.58rem;background:color-mix(in srgb,var(--c,var(--ln)) 14%,var(--card));border-color:color-mix(in srgb,var(--c,var(--ln)) 42%,var(--ln))}
 .card.done{opacity:.78}.card.done b{text-decoration:line-through}
 .card.late{background:color-mix(in srgb,var(--late-soft) 24%,var(--card));border-color:color-mix(in srgb,var(--late-soft) 58%,var(--ln))}
 .card.late2{background:color-mix(in srgb,var(--late-hard) 20%,var(--card));border-color:color-mix(in srgb,var(--late-hard) 55%,var(--ln))}
@@ -127,10 +138,10 @@ small,.mu{color:var(--mu)}
 .box.late2{background:color-mix(in srgb,var(--late-hard) 18%,var(--card));border-color:color-mix(in srgb,var(--late-hard) 52%,var(--ln))}
 .box.unread-act{background:color-mix(in srgb,var(--ac) 11%,var(--card));border-color:color-mix(in srgb,var(--ac) 38%,var(--ln))}
 .home-confirm-box{background:color-mix(in srgb,var(--ac2) 9%,var(--card));border-color:color-mix(in srgb,var(--ac2) 38%,var(--ln))}
-.chk{flex:none;width:2.85rem;height:2.85rem;border-radius:.9rem;border:1.5px solid color-mix(in srgb,var(--c,var(--ln)) 38%,var(--ln));background:var(--card);font-size:1.25rem;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(45,32,20,.05)}
+.chk{flex:none;width:2.35rem;height:2.35rem;border-radius:.75rem;border:1.5px solid color-mix(in srgb,var(--c,var(--ln)) 38%,var(--ln));background:var(--card);font-size:1.05rem;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 1px 2px rgba(45,32,20,.05)}
 .done .chk{background:#3d996e;color:#fffaf2;border-color:#3d996e}
 .bd{flex:1;min-width:0;overflow-wrap:anywhere;cursor:pointer}
-.due-pill{display:inline-block;background:var(--card);border:1.5px solid var(--ln);border-radius:999px;padding:.18rem .6rem;font-size:.8rem;font-weight:800;color:var(--tx)}
+.due-pill{display:inline-block;background:var(--card);border:1.5px solid var(--ln);border-radius:999px;padding:.12rem .48rem;font-size:.72rem;font-weight:800;color:var(--tx)}
 .card.late .due-pill{background:color-mix(in srgb,var(--late-soft) 32%,var(--card));border-color:color-mix(in srgb,var(--late-soft) 72%,var(--ln));color:#693b0a}
 .card.late2 .due-pill{background:color-mix(in srgb,var(--late-hard) 26%,var(--card));border-color:color-mix(in srgb,var(--late-hard) 68%,var(--ln));color:#87261c}
 html[data-theme="dark"] .card.late .due-pill{color:#ffe4be}
@@ -140,47 +151,41 @@ html[data-theme="dark"] .card.late2 .due-pill{color:#ffd2cb}
   html:not([data-theme="light"]) .card.late2 .due-pill{color:#ffd2cb}
 }
 
-.wheel-grid{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;margin-top:.25rem}
-@media(max-width:460px){.wheel-grid{grid-template-columns:1fr}}
-.wheel-wrap{position:relative;border-radius:1rem;border:1.5px solid color-mix(in srgb,var(--wcol,var(--ln)) 45%,var(--ln));background:color-mix(in srgb,var(--wcol,var(--ln)) 11%,var(--card));overflow:hidden}
-.wheel-col{height:7.6rem;overflow-y:auto;scroll-snap-type:y mandatory;padding:2.5rem .35rem;scrollbar-width:none}
-.wheel-col::-webkit-scrollbar{display:none}
-.wheel-item{scroll-snap-align:center;min-height:2.2rem;padding:.24rem .45rem;border-radius:.65rem;display:flex;align-items:center;justify-content:center;text-align:center;font-size:.88rem;font-weight:700;color:var(--mu);cursor:pointer;transition:transform .12s ease,color .12s ease,background .12s ease}
-.wheel-item.sel{color:var(--tx);font-weight:800;background:color-mix(in srgb,var(--wcol,var(--ac)) 20%,var(--card));transform:scale(1.03)}
-.wheel-band{pointer-events:none;position:absolute;left:.25rem;right:.25rem;top:50%;transform:translateY(-50%);height:2.25rem;border-top:2px solid color-mix(in srgb,var(--wcol,var(--ac)) 72%,var(--ln));border-bottom:2px solid color-mix(in srgb,var(--wcol,var(--ac)) 72%,var(--ln));border-radius:.55rem}
+.qty-box{display:inline-flex;align-items:center;gap:.3rem;background:var(--bg);border:1.5px solid var(--ln);border-radius:999px;padding:.1rem .25rem}
+.qbtn{width:1.75rem;height:1.75rem;min-height:1.75rem;border-radius:999px;border:1.5px solid var(--ln);background:var(--card);color:var(--tx);font:inherit;font-size:.9rem;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0}
+.qval{min-width:1.4rem;text-align:center;font-weight:800;font-size:.82rem}
 
-.qty-box{display:inline-flex;align-items:center;gap:.35rem;background:var(--bg);border:1.5px solid var(--ln);border-radius:999px;padding:.12rem .3rem}
-.qbtn{width:1.9rem;height:1.9rem;min-height:1.9rem;border-radius:999px;border:1.5px solid var(--ln);background:var(--card);color:var(--tx);font:inherit;font-size:1rem;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0}
-.qval{min-width:1.6rem;text-align:center;font-weight:800;font-size:.92rem}
-
-.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:.3rem;text-align:center}
-.day{min-height:3rem;border-radius:.8rem;border:1.5px solid var(--ln);background:var(--card);color:var(--tx);cursor:pointer;padding:.1rem}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:.26rem;text-align:center}
+.day{min-height:2.6rem;border-radius:.72rem;border:1.5px solid var(--ln);background:var(--card);color:var(--tx);cursor:pointer;padding:.08rem;font-size:.82rem}
 .day.tod{border-color:var(--ac);box-shadow:inset 0 0 0 1px var(--ac)}.day.sel{background:var(--ac);color:#fffaf2}
-.dots{display:flex;gap:2px;justify-content:center;height:.45rem}.dots i{width:.4rem;height:.4rem;border-radius:50%}
-.fab{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0));z-index:6;border-radius:1rem;min-height:2.9rem;padding:.42rem 1rem;box-shadow:0 6px 18px rgba(45,32,20,.18)}
-dialog{width:min(100% - 1rem,34rem);max-height:92dvh;overflow-y:auto;border:0;border-radius:1.25rem;background:var(--bg);color:var(--tx);padding:.95rem 1rem}
+.dots{display:flex;gap:2px;justify-content:center;height:.38rem}.dots i{width:.34rem;height:.34rem;border-radius:50%}
+.fab{position:fixed;right:.85rem;bottom:calc(.85rem + env(safe-area-inset-bottom,0));z-index:6;border-radius:1rem;min-height:2.45rem;padding:.3rem .85rem;font-size:.84rem;box-shadow:0 5px 15px rgba(45,32,20,.18)}
+dialog{width:min(100% - 1rem,34rem);max-height:92dvh;overflow-y:auto;border:0;border-radius:1.2rem;background:var(--bg);color:var(--tx);padding:.85rem .9rem}
 dialog::backdrop{background:rgba(28,23,20,.55)}
-label{display:block;font-weight:700;margin:.42rem 0 .14rem;font-size:.88rem}
-input,select,textarea{width:100%;min-height:2.45rem;padding:.32rem .68rem;border-radius:.85rem;border:1.5px solid var(--ln);background:var(--card);color:var(--tx);font:inherit}
-input[type=checkbox]{width:1.25rem;min-height:0;height:1.25rem}
+label{display:block;font-weight:700;margin:.36rem 0 .12rem;font-size:.82rem}
+input,select,textarea{width:100%;min-height:2.2rem;padding:.24rem .6rem;border-radius:.78rem;border:1.5px solid var(--ln);background:var(--card);color:var(--tx);font:inherit;font-size:.86rem}
+input[type=checkbox]{width:1.15rem;min-height:0;height:1.15rem}
 .gate{position:fixed;inset:0;z-index:50;background:var(--bg);overflow:auto;padding:1rem}
-.gate-logo{width:5.2rem;height:5.2rem;border-radius:1.25rem;display:block;margin:0 auto .6rem;object-fit:cover;box-shadow:0 3px 10px rgba(45,32,20,.14)}
-.code{font-size:.95rem;font-weight:800;letter-spacing:.08em;word-break:break-all;user-select:all}
-#toast{position:fixed;left:.7rem;right:.7rem;bottom:5rem;z-index:60;pointer-events:none;display:flex;justify-content:center}
-.t{background:#261f1a;color:#fffaf2;padding:.75rem 1rem;border-radius:.9rem;font-weight:700;display:flex;align-items:center;gap:.8rem;pointer-events:auto;box-shadow:0 4px 14px rgba(28,23,20,.32);max-width:36rem;width:100%;justify-content:space-between}
-.t button{background:#fffaf2;color:#261f1a;border:0;border-radius:.6rem;padding:.3rem .7rem;font:inherit;font-weight:800;cursor:pointer;flex:none}
+.gate-logo{width:5rem;height:5rem;border-radius:1.25rem;display:block;margin:0 auto .55rem;object-fit:cover;box-shadow:0 3px 10px rgba(45,32,20,.14)}
+.code{font-size:.92rem;font-weight:800;letter-spacing:.08em;word-break:break-all;user-select:all}
+#toast{position:fixed;left:.65rem;right:.65rem;bottom:4.4rem;z-index:60;pointer-events:none;display:flex;justify-content:center}
+.t{background:#261f1a;color:#fffaf2;padding:.62rem .88rem;border-radius:.85rem;font-weight:700;font-size:.82rem;display:flex;align-items:center;gap:.7rem;pointer-events:auto;box-shadow:0 4px 14px rgba(28,23,20,.32);max-width:36rem;width:100%;justify-content:space-between}
+.t button{background:#fffaf2;color:#261f1a;border:0;border-radius:.55rem;padding:.24rem .6rem;font:inherit;font-size:.78rem;font-weight:800;cursor:pointer;flex:none}
 [hidden]{display:none!important}
 </style>
 </head>
 <body>
 <header><div class="w">
 <div class="top-head">
-  <div>
+  <div class="brand-left">
     <button type="button" class="brand-btn" data-act="go_home" aria-label="Torna alla Home di Family Life" title="Torna alla Home">
       <img src="icon-192.png" alt="Logo Family Life" class="fl-logo">
       <span class="fl-name">Family Life</span>
     </button>
-    <small id="dt"></small><h1 id="hi">Ciao</h1>
+    <div class="greet-col">
+      <small id="dt" class="dt-line"></small>
+      <h1 id="hi">Ciao</h1>
+    </div>
   </div>
   <div class="top-right">
     <div class="icon-pair">
@@ -198,7 +203,7 @@ input[type=checkbox]{width:1.25rem;min-height:0;height:1.25rem}
 </div>
 <div class="mid-strip">
   <div class="chips" id="chips" role="group" aria-label="Membri famiglia"></div>
-  <small><span id="stxt" aria-live="polite">Cloud: connessione…</span></small>
+  <small class="stxt-line"><span id="stxt" aria-live="polite">Cloud: connessione…</span></small>
 </div>
 <nav class="tabs" role="tablist" aria-label="Sezioni principali">
  <button class="btn on" role="tab" aria-selected="true" id="tba" data-act="tab" data-id="a">🏠 Home</button>
@@ -238,7 +243,7 @@ const withOtherSub=arr=>{
 };
 const subs=t=>{
  const parsed=String(t).split("\n").map(l=>l.trim()).filter(Boolean).slice(0,50).map(l=>{
-   const m=l.match(/^((?:\p{Extended_Pictographic}\uFE0F?\u200D?)+)\s*(.+)$/u);
+   const m=l.match(/^((?:\p{Extended_Pictographic}\p{Emoji_Modifier}?\uFE0F?\u200D?)+)\s*(.+)$/u);
    return m?{i:m[1],n:m[2].slice(0,30)}:{i:"",n:l.slice(0,30)};
  });
  return withOtherSub(parsed);
@@ -247,9 +252,9 @@ const safeColor=c=>/^#[0-9a-f]{6}$/i.test(c)?c:"#b5835a";
 const DEF=()=>[["bollette","Bollette","💡","#4a909c","💡 Luce e gas\n💧 Acqua e rifiuti\n🌐 Internet e telefono\n🏢 Condominio e affitto"],["salute","Visite mediche","🩺","#c96a73","🩺 Visite specialistiche\n🔬 Analisi ed esami\n🦷 Dentista"],["benessere","Cura e benessere","💇🏽‍♂️","#b86b8d","💈 Barbiere\n✂️ Parrucchiere\n💆🏽‍♀️ Estetista\n💅 Nails"],["auto","Auto","🚗","#4d7eb5","🚗 Bollo\n🔧 Revisione e tagliando\n🛡️ Assicurazione\n🛞 Cambio gomme"],["animali","Animali","🐾","#c48836","🩺 Veterinario\n🍖 Cibo e scorte\n✂️ Toelettatura"],["famiglia","Famiglia","🎂","#8363b8","🎂 Compleanni\n👵 Visite ai parenti\n🎉 Feste"],["casa","Casa","🌿","#49916d","🌿 Passeggiate\n🛡️ Assicurazione casa\n🚰 Idraulico\n🔥 Caldaia\n🧹 Pulizie"],["medicine","Medicine","💊","#cf6374","📦 Confezioni e scorte\n📝 Ricette\n🏪 Farmacia"],["fisco","Fisco","🏛️","#78746e","📄 730\n💶 F24\n🗑️ Tari\n🚨 Multe"],["viaggi","Viaggi","✈️","#cf7948","🎫 Biglietti\n🏨 Prenotazioni\n🛂 Documenti"],["varie","Varie","🛍️","#b85e84","🛒 Spesa\n💳 Pagamenti vari\n🎁 Regali"]].map(([id,n,i,c,s])=>({id,n,i,c,s:subs(s)}));
 const REP={none:"Non si ripete",daily:"Ogni giorno",weekly:"Ogni settimana",monthly:"Ogni mese",yearly:"Ogni anno"};
 const AGE_PROFILES=[
-  {icon:"🧑",label:"Ragazzo",px:17},
-  {icon:"🧑🏽",label:"Adulto",px:19},
-  {icon:"👴",label:"Anziano",px:22}
+  {icon:"🧑",label:"Ragazzo",px:16},
+  {icon:"🧑🏽",label:"Adulto",px:17.5},
+  {icon:"👴",label:"Anziano",px:19.5}
 ];
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -275,12 +280,23 @@ async function hashPin(pin,saltHex){
  return hex(salt)+":"+hex(bits);
 }
 const checkPin=async(pin,st)=>!!st&&(await hashPin(pin,st.split(":")[0]))===st;
+const LOCK_K="family_life_lock";
+function lockLeft(){try{const l=JSON.parse(localStorage.getItem(LOCK_K)||"{}");return Math.max(0,Math.ceil(((l.until||0)-Date.now())/1000))}catch(e){return 0}}
+function pinFail(){try{const l=JSON.parse(localStorage.getItem(LOCK_K)||"{}");l.n=(l.n||0)+1;if(l.n>=5)l.until=Date.now()+Math.min(900,30*2**(l.n-5))*1000;localStorage.setItem(LOCK_K,JSON.stringify(l))}catch(e){}}
+function pinOk(){try{localStorage.removeItem(LOCK_K)}catch(e){}}
+async function guardedCheck(pin,st){
+ const s=lockLeft();
+ if(s>0)throw new Error("Troppi tentativi, riprova tra "+s+" secondi");
+ const ok=await checkPin(pin,st);
+ if(ok)pinOk();else pinFail();
+ return ok;
+}
 
-const SYNC=["owner","members","items","shop","lists","activeListId","act","cats","pay","trash","updatedAt"];
+const SYNC=["owner","members","items","shop","lists","activeListId","act","cats","pay","trash","gone","updatedAt"];
 const K="family_life_v2";
 const SESS_K="family_life_sess_v2";
 const DEF_LISTS=()=>[{id:"list_main",name:"Spesa di casa",createdAt:Date.now(),modAt:Date.now()}];
-const seed=()=>({code:"",owner:"",members:[],items:[],shop:[],lists:DEF_LISTS(),activeListId:"list_main",act:[],cats:DEF(),pay:[],trash:[],updatedAt:0,me:"",reg:false,out:false,stay:true,consentAt:0,fsIdx:1,seenActAt:0,themeMode:"auto"});
+const seed=()=>({code:"",owner:"",members:[],items:[],shop:[],lists:DEF_LISTS(),activeListId:"list_main",act:[],cats:DEF(),pay:[],trash:[],gone:[],updatedAt:0,me:"",reg:false,out:false,stay:true,consentAt:0,fsIdx:1,seenActAt:0,themeMode:"auto"});
 let S=(()=>{
  let st=seed();
  try{const r=localStorage.getItem(K);if(r)st=Object.assign(st,JSON.parse(r))}catch(e){}
@@ -356,7 +372,7 @@ function save(skipRemote){
  ensureLists();
  if(!skipRemote&&!remoteLock)S.updatedAt=Date.now();
  try{localStorage.setItem(K,JSON.stringify(S))}catch(e){toast("Spazio dispositivo pieno")}
- if(!skipRemote&&!remoteLock&&window.FL_SYNC){clearTimeout(syncTimer);syncTimer=setTimeout(()=>window.FL_SYNC.push(S).catch(()=>setSt("Cloud non raggiungibile · dati locali")),300)}
+ if(!skipRemote&&!remoteLock&&window.FL_SYNC){clearTimeout(syncTimer);syncTimer=setTimeout(()=>window.FL_SYNC.push(S).catch(()=>setSt("Cloud non raggiungibile · dati locali")),250)}
 }
 const pick=r=>Object.fromEntries(SYNC.filter(k=>k in r).map(k=>[k,r[k]]));
 
@@ -382,7 +398,9 @@ function mergeRemote(rem){
  if(rem.activeListId)S.activeListId=rem.activeListId;
  if(Array.isArray(rem.trash))S.trash=mergeById(S.trash,rem.trash);
  if(Array.isArray(rem.items))S.items=mergeById(S.items,rem.items,trashIds);
- if(Array.isArray(rem.shop))S.shop=mergeById(S.shop,rem.shop);
+ S.gone=mergeById(S.gone||[],rem.gone||[]);
+ const goneIds=new Set(S.gone.map(x=>x.id));
+ S.shop=mergeById(S.shop,Array.isArray(rem.shop)?rem.shop:[],goneIds);
  if(Array.isArray(rem.pay))S.pay=mergeById(S.pay,rem.pay).sort((a,b)=>b.at-a.at);
  if(Array.isArray(rem.act)){
    const am=new Map();
@@ -398,7 +416,7 @@ function purge(){
  const n=Date.now();
  ensureCats();
  ensureLists();
- S.pay=S.pay||[];S.trash=S.trash||[];
+ S.pay=S.pay||[];S.trash=S.trash||[];S.gone=(S.gone||[]).filter(g=>n-g.at<30*864e5);
  S.items=S.items.filter(i=>!(i.done&&i.doneAt&&n-i.doneAt>15*864e5));
  S.shop=S.shop.filter(x=>!x.done||n-x.at<62*864e5);
  S.act=S.act.slice(0,30);
@@ -415,6 +433,9 @@ const canSee=i=>isAdmin()||WA(i).includes(me().name);
 const isAssignedToMe=i=>WA(i).includes(me().name);
 const byDate=(a,b)=>a.done===b.done?a.date.localeCompare(b.date):(a.done?1:-1);
 const f2=v=>"€ "+Number(v||0).toFixed(2).replace(".",",");
+const tomb=ids=>{S.gone=S.gone||[];const n=Date.now();ids.forEach(i=>S.gone.push({id:i,at:n,modAt:n}))};
+let remoteRender=false;
+const keep=el=>remoteRender&&el.contains(document.activeElement)&&/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
 let tab="a",view=null,cy=today().getFullYear(),cm=today().getMonth(),calSel=off(0);
 
 function unreadActs(){
@@ -494,64 +515,11 @@ function addPay(cid,t,a,qty=1,unitAmt=null){
  S.pay.unshift(p);return p.id;
 }
 
-function wheelHtml(field,items,selectedVal,colorHex){
- const safeC=safeColor(colorHex);
- return `<div class="wheel-wrap" style="--wcol:${safeC}">
-   <div class="wheel-band"></div>
-   <div class="wheel-col" data-wheel="${esc(field)}" role="listbox" tabindex="0">
-     ${items.map(it=>{
-       const active=it.value===selectedVal;
-       return `<div class="wheel-item ${active?"sel":""}" data-wheel-val="${esc(it.value)}" role="option" aria-selected="${active}">${esc(it.label)}</div>`;
-     }).join("")}
-   </div>
- </div>`;
-}
-
-function subWheelItems(cid){
+const subOptions=(cid,sel)=>{
  const list=withOtherSub(cat(cid).s);
- return list.map(x=>({value:x.n,label:(x.i?x.i+" ":"")+x.n}));
-}
-
-function syncWheelSelection(col,val){
- if(!col)return;
- const opts=[...col.querySelectorAll(".wheel-item")];
- const idx=Math.max(0,opts.findIndex(o=>o.dataset.wheelVal===val));
- opts.forEach((o,i)=>{
-   const isSel=i===idx;
-   o.classList.toggle("sel",isSel);
-   o.setAttribute("aria-selected",String(isSel));
- });
- const target=opts[idx];
- if(target){
-   const topPos=target.offsetTop-(col.clientHeight-target.clientHeight)/2;
-   col.scrollTo({top:Math.max(0,topPos),behavior:"smooth"});
- }
-}
-
-function setFormWheelValue(form,field,val){
- if(!form)return;
- const hidden=form.querySelector(`input[type="hidden"][name="${field}"]`);
- if(hidden)hidden.value=val;
- const col=form.querySelector(`.wheel-col[data-wheel="${field}"]`);
- syncWheelSelection(col,val);
- if(field==="cat"){
-   const cObj=cat(val);
-   const catWrap=col&&col.closest(".wheel-wrap");
-   if(catWrap)catWrap.style.setProperty("--wcol",safeColor(cObj.c));
-   const subWrap=form.querySelector('.wheel-wrap[data-role="sub-wrap"]');
-   const subHidden=form.querySelector('input[type="hidden"][name="sub"]');
-   const subItems=subWheelItems(val);
-   const rawSub=subHidden?subHidden.value:"";
-   const validSub=subItems.some(x=>x.value===rawSub)?rawSub:OTHER_SUB.n;
-   if(subHidden)subHidden.value=validSub;
-   if(subWrap){
-     subWrap.style.setProperty("--wcol",safeColor(cObj.c));
-     subWrap.innerHTML=wheelHtml("sub",subItems,validSub,cObj.c).replace(/^<div class="wheel-wrap"[^>]*>|<\/div>$/g,"");
-     const newSubCol=subWrap.querySelector('.wheel-col[data-wheel="sub"]');
-     setTimeout(()=>syncWheelSelection(newSubCol,validSub),10);
-   }
- }
-}
+ const cur=list.some(x=>x.n===sel)?sel:OTHER_SUB.n;
+ return list.map(x=>`<option value="${esc(x.n)}" ${x.n===cur?"selected":""}>${esc((x.i?x.i+" ":"")+x.n)}</option>`).join("");
+};
 
 function nextDate(s,r){
  const d=parse(s),g=d.getDate();
@@ -666,7 +634,7 @@ function card(it){
  return `<div class="card ${it.done?"done":""} ${lateCls}" style="--c:${safeColor(c.c)}">
  <button class="chk" data-act="toggle" data-id="${esc(it.id)}" aria-label="${it.done?"Segna da fare":"Segna fatto"}">${it.done?"✓":esc(c.i)}</button>
  <div class="bd" data-act="edit" data-id="${esc(it.id)}"><span class="cat-line">${esc(c.i)} ${esc(c.n)} · ${esc(subLabel)}${it.rep!=="none"?" · 🔁":""}</span><br><b>${esc(it.title)}</b><br><small>👤 ${esc(WA(it).join(", "))}${it.time?" · 🕐 "+esc(it.time):""}${it.amt>0?" · "+f2(it.amt):""}${it.note?" · "+esc(it.note):""}</small></div>
- <div style="text-align:right"><span class="due-pill">${esc(b)}</span><br><button class="btn sm" style="margin-top:.3rem" data-act="ics" data-id="${esc(it.id)}" aria-label="Aggiungi al calendario">📅</button></div></div>`;
+ <div style="text-align:right"><span class="due-pill">${esc(b)}</span><br><button class="btn sm" style="margin-top:.24rem" data-act="ics" data-id="${esc(it.id)}" aria-label="Aggiungi al calendario">📅</button></div></div>`;
 }
 
 function homeNoticeHtml(){
@@ -676,7 +644,7 @@ function homeNoticeHtml(){
  const summary=acts.length
    ?`📣 ${esc(acts[0].by)} ${esc(acts[0].t)}${acts.length>1?` (+${acts.length-1})`:""}`
    :`⏰ ${due.length} promemoria in scadenza`;
- return `<div class="box home-confirm-box"><div class="row" style="gap:.5rem;flex-wrap:wrap"><div style="flex:1;min-width:11rem"><b>Avviso rapido</b><br><small>${summary}</small></div><div class="row" style="gap:.35rem"><button type="button" class="btn sm" data-act="notif">Dettagli</button><button type="button" class="btn sm pri" data-act="confirm_home">✓ Confermato</button></div></div></div>`;
+ return `<div class="box home-confirm-box"><div class="row" style="gap:.45rem;flex-wrap:wrap"><div style="flex:1;min-width:10rem"><b>Avviso rapido</b><br><small>${summary}</small></div><div class="row" style="gap:.3rem"><button type="button" class="btn sm" data-act="notif">Dettagli</button><button type="button" class="btn sm pri" data-act="confirm_home">✓ Confermato</button></div></div></div>`;
 }
 
 function calHtml(){
@@ -687,7 +655,7 @@ function calHtml(){
    cells+=`<button class="day ${s===calSel?"sel":""} ${s===off(0)?"tod":""}" data-act="day" data-id="${s}" aria-label="${d} ${first.toLocaleDateString("it-IT",{month:"long"})}"><b>${d}</b><div class="dots">${its.slice(0,3).map(i=>`<i style="background:${safeColor(cat(i.cat).c)}"></i>`).join("")}</div></button>`;
  }
  const sel=S.items.filter(i=>vis(i)&&i.date===calSel&&canSee(i)).sort(byDate);
- return `<div class="row" style="margin:.5rem 0"><button class="btn sm" data-act="cm" data-id="-1" aria-label="Mese precedente">‹</button><h2 style="margin:0;text-transform:capitalize">${first.toLocaleDateString("it-IT",{month:"long",year:"numeric"})}</h2><button class="btn sm" data-act="cm" data-id="1" aria-label="Mese successivo">›</button></div>
+ return `<div class="row" style="margin:.4rem 0"><button class="btn sm" data-act="cm" data-id="-1" aria-label="Mese precedente">‹</button><h2 style="margin:0;text-transform:capitalize">${first.toLocaleDateString("it-IT",{month:"long",year:"numeric"})}</h2><button class="btn sm" data-act="cm" data-id="1" aria-label="Mese successivo">›</button></div>
  <div class="cal">${[..."LMMGVSD"].map(x=>`<small>${x}</small>`).join("")}${cells}</div>
  <h2>${parse(calSel).toLocaleDateString("it-IT",{weekday:"long",day:"numeric",month:"long"})}</h2>
  ${sel.length?sel.map(card).join(""):'<div class="box">Nessun impegno.</div>'}
@@ -702,12 +670,12 @@ function shopHtml(){
  const it=allInList.sort((a,b)=>a.done-b.done);
  return `<h2>🛒 Liste spesa</h2>
  <div class="chips" role="group" aria-label="Liste spesa">${S.lists.map(l=>`<button type="button" class="btn sm ${l.id===curList.id?"on":""}" data-act="slist" data-id="${esc(l.id)}">${esc(l.name)}</button>`).join("")}</div>
- <form class="box" data-form="newlist"><label>Nome nuova lista<input name="lname" placeholder="Es. Spesa settimanale, Farmacia, Festa..." required maxlength="36"></label><button class="btn sec" style="width:100%;margin-top:.55rem">＋ Crea lista e notifica</button></form>
- <form class="box" data-form="shop"><div class="cat-line">Lista attiva: <b>${esc(curList.name)}</b></div><label>Prodotto<input name="n" placeholder="Es. Latte, Pane, Mele..." required maxlength="40"></label><label>Quantità iniziale<input name="qt" type="number" min="1" step="1" value="1"></label><button class="btn pri" style="width:100%;margin-top:.7rem">Aggiungi a "${esc(curList.name)}"</button></form>`+
- (doneCount?`<div class="row" style="margin:.2rem 0 .5rem"><small class="mu">${doneCount} articoli già presi</small><button type="button" class="btn sm" data-act="sclear_done" data-id="${esc(curList.id)}">🧹 Pulisci presi</button></div>`:"")+
+ <form class="box" data-form="newlist"><label>Nome nuova lista<input name="lname" placeholder="Es. Spesa settimanale, Farmacia, Festa..." required maxlength="36"></label><button class="btn sec" style="width:100%;margin-top:.5rem">＋ Crea lista e notifica</button></form>
+ <form class="box" data-form="shop"><div class="cat-line">Lista attiva: <b>${esc(curList.name)}</b></div><label>Prodotto<input name="n" placeholder="Es. Latte, Pane, Mele..." required maxlength="40"></label><label>Quantità iniziale<input name="qt" type="number" min="1" step="1" value="1"></label><button class="btn pri" style="width:100%;margin-top:.6rem">Aggiungi a "${esc(curList.name)}"</button></form>`+
+ (doneCount?`<div class="row" style="margin:.18rem 0 .42rem"><small class="mu">${doneCount} articoli già presi</small><button type="button" class="btn sm" data-act="sclear_done" data-id="${esc(curList.id)}">🧹 Pulisci presi</button></div>`:"")+
  (it.length?it.map(x=>{
    const q=Math.max(1,Number(x.qty)||1);
-   return `<div class="card ${x.done?"done":""}"><div class="bd" style="cursor:default"><b>${esc(x.n)}</b><br><small>${x.done?`✓ ${esc(x.by)} · ${q} pz · ${f2(x.p)}`:`Da comprare · ${q} pz`}</small>${x.done?"":`<div class="row" style="margin-top:.55rem;flex-wrap:wrap"><div class="qty-box" aria-label="Regola quantità"><button type="button" class="qbtn" data-act="qdec" data-id="${esc(x.id)}" aria-label="Diminuisci quantità">−</button><span class="qval">${q}</span><button type="button" class="qbtn" data-act="qinc" data-id="${esc(x.id)}" aria-label="Aumenta quantità">+</button></div><div class="row" style="gap:.35rem"><input id="p${esc(x.id)}" inputmode="decimal" placeholder="€ prezzo" style="width:6.6rem"><button class="btn sm pri" data-act="sbuy" data-id="${esc(x.id)}">✓ Preso</button></div></div>`}</div><button class="btn sm dng" data-act="sdel" data-id="${esc(x.id)}" aria-label="Elimina">🗑</button></div>`;
+   return `<div class="card ${x.done?"done":""}"><div class="bd" style="cursor:default"><b>${esc(x.n)}</b><br><small>${x.done?`✓ ${esc(x.by)} · ${q} pz · ${f2(x.p)}`:`Da comprare · ${q} pz`}</small>${x.done?"":`<div class="row" style="margin-top:.48rem;flex-wrap:wrap"><div class="qty-box" aria-label="Regola quantità"><button type="button" class="qbtn" data-act="qdec" data-id="${esc(x.id)}" aria-label="Diminuisci quantità">−</button><span class="qval">${q}</span><button type="button" class="qbtn" data-act="qinc" data-id="${esc(x.id)}" aria-label="Aumenta quantità">+</button></div><div class="row" style="gap:.32rem"><input id="p${esc(x.id)}" inputmode="decimal" placeholder="€ prezzo" style="width:6.2rem"><button class="btn sm pri" data-act="sbuy" data-id="${esc(x.id)}">✓ Preso</button></div></div>`}</div><button class="btn sm dng" data-act="sdel" data-id="${esc(x.id)}" aria-label="Elimina">🗑</button></div>`;
  }).join(""):'<div class="box">Lista vuota.</div>');
 }
 
@@ -726,9 +694,12 @@ function trashHtml(){
 }
 function famHtml(){
  const ad=isAdmin();
- return `<h2>Membri</h2><div class="chips">${S.members.map(x=>`<span class="btn sm ${x.id===me().id?"on":""}">${esc(x.name)}${x.id===S.owner?" ⭐":""}</span>`).join("")}</div>
- ${ad?`<div class="box"><b>🔑 Codice famiglia</b><p class="mu" style="font-size:.9rem">Segreto: chi lo possiede può entrare. Condividilo solo con i familiari.</p><p class="code">${esc(S.code)}</p><div class="row"><button class="btn pri" style="flex:1" data-act="share">📤 Condividi invito</button><button class="btn" data-act="copy">Copia</button></div><form data-form="changecode" style="margin-top:.75rem;padding-top:.65rem;border-top:1px solid var(--ln)"><label>Modifica codice famiglia (4-26 caratteri: A-Z, 0-9, -)<input name="newcode" value="${esc(S.code)}" required maxlength="26" minlength="4" autocapitalize="characters" style="text-transform:uppercase"></label><button class="btn sec" style="width:100%;margin-top:.55rem">Salva nuovo codice famiglia</button></form></div>
- <button class="btn" style="width:100%;margin-bottom:.7rem" data-act="cats">✏️ Categorie e sottocategorie</button><form class="box" data-form="member"><b>Aggiungi familiare (su questo dispositivo)</b><label>Nome<input name="nm" required maxlength="30"></label><label>Età<input name="ag" type="number" min="14" max="95" required></label><label>PIN (4-8 numeri)<input name="pin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" required></label><label>Ripeti PIN<input name="pin2" type="password" inputmode="numeric" pattern="[0-9]{4,8}" required></label><button class="btn pri" style="width:100%;margin-top:.7rem">Aggiungi</button></form>`:'<div class="box mu">Solo l’amministratore gestisce inviti e membri.</div>'}
+ return `<h2>Membri</h2><div class="box">${S.members.map(x=>{
+   const canRemove=ad&&x.id!==S.owner&&x.id!==me().id;
+   return `<div class="row" style="padding:.25rem 0;border-bottom:1px solid var(--ln)"><span><b>${esc(x.name)}</b>${x.id===S.owner?" ⭐":""}${x.id===me().id?" <small class='mu'>(tu)</small>":""}</span>${canRemove?`<button type="button" class="btn sm dng" data-act="rem_member" data-id="${esc(x.id)}">Rimuovi</button>`:""}</div>`;
+ }).join("")}</div>
+ ${ad?`<div class="box"><b>🔑 Codice famiglia</b><p class="mu" style="font-size:.86rem">Codice univoco della famiglia: condividilo con i familiari per farli unire.</p><p class="code">${esc(S.code)}</p><div class="row"><button class="btn pri" style="flex:1" data-act="share">📤 Condividi invito</button><button class="btn" data-act="copy">Copia</button></div><form data-form="changecode" style="margin-top:.7rem;padding-top:.6rem;border-top:1px solid var(--ln)"><label>Modifica codice famiglia (4-26 caratteri: A-Z, 0-9, -)<input name="newcode" value="${esc(S.code)}" required maxlength="26" minlength="4" autocapitalize="characters" style="text-transform:uppercase"></label><button class="btn sec" style="width:100%;margin-top:.5rem">Salva nuovo codice famiglia</button></form></div>
+ <button class="btn" style="width:100%;margin-bottom:.65rem" data-act="cats">✏️ Categorie e sottocategorie</button><form class="box" data-form="member"><b>Aggiungi familiare</b><label>Nome<input name="nm" required maxlength="30"></label><label>Età<input name="ag" type="number" min="14" max="95" required></label><label>PIN (4-8 numeri)<input name="pin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" required></label><label>Ripeti PIN<input name="pin2" type="password" inputmode="numeric" pattern="[0-9]{4,8}" required></label><button class="btn pri" style="width:100%;margin-top:.65rem">Aggiungi</button></form>`:'<div class="box mu">Solo l’amministratore gestisce inviti, codice e membri.</div>'}
  ${payHtml()}${trashHtml()}<h2>Attività recenti</h2>${S.act.slice(0,8).map(a=>`<div class="box"><b>${esc(a.by)}</b> ${esc(a.t)}<br><small>${new Date(a.at).toLocaleString("it-IT")}</small></div>`).join("")||'<div class="box">Nessuna attività.</div>'}`;
 }
 
@@ -738,19 +709,27 @@ function render(){
  $("chips").innerHTML=S.members.map(x=>`<button class="btn sm ${x.id===m.id?"on":""}" data-act="who" data-id="${esc(x.id)}">${x.id!==m.id&&!isAdmin()?"🔒 ":""}${esc(x.name)}</button>`).join("");
  const baseUp=S.items.filter(i=>vis(i)&&canSee(i)&&diff(i.date)<=6);
  const up=(homeFilter==="mine"?baseUp.filter(isAssignedToMe):baseUp).sort(byDate);
- const filterBar=`<div class="chips" style="margin:.1rem 0 .45rem" role="group" aria-label="Filtro promemoria">
-   <button type="button" class="btn sm ${homeFilter==="all"?"on":""}" data-act="hfilter" data-id="all">Tutti (${baseUp.filter(x=>!x.done).length})</button>
-   <button type="button" class="btn sm ${homeFilter==="mine"?"on":""}" data-act="hfilter" data-id="mine">Solo miei (${baseUp.filter(x=>!x.done&&isAssignedToMe(x)).length})</button>
+ const dueStrip=`<div class="due-strip">
+   <div class="due-title-grp">
+     <h2 style="margin:0">⏰ In scadenza</h2>
+     <small class="mu">· ${up.filter(x=>!x.done).length} da fare</small>
+   </div>
+   <div class="due-filter-grp" role="group" aria-label="Filtro promemoria">
+     <button type="button" class="btn sm ${homeFilter==="all"?"on":""}" data-act="hfilter" data-id="all">Tutti (${baseUp.filter(x=>!x.done).length})</button>
+     <button type="button" class="btn sm ${homeFilter==="mine"?"on":""}" data-act="hfilter" data-id="mine">Solo miei (${baseUp.filter(x=>!x.done&&isAssignedToMe(x)).length})</button>
+   </div>
  </div>`;
- $("va").innerHTML=`${homeNoticeHtml()}<div class="row"><h2 style="margin:.65rem 0 .35rem">⏰ In scadenza</h2><small class="mu">· ${up.filter(x=>!x.done).length} da fare</small></div>${filterBar}${up.length?up.map(card).join(""):'<div class="box">🌿 Nessuna scadenza imminente.</div>'}`;
- $("vc").innerHTML=calHtml();$("vf").innerHTML=famHtml();$("vs").innerHTML=shopHtml();
+ $("va").innerHTML=`${homeNoticeHtml()}${dueStrip}${up.length?up.map(card).join(""):'<div class="box">🌿 Nessuna scadenza imminente.</div>'}`;
+ $("vc").innerHTML=calHtml();
+ if(!keep($("vf")))$("vf").innerHTML=famHtml();
+ if(!keep($("vs")))$("vs").innerHTML=shopHtml();
  applyTheme();
  applyFont();
  updateNotifBadge();
 }
 
 const WB=sel=>`<div class="chips">${(isAdmin()?S.members:[me()]).map(x=>`<label class="btn sm" style="margin:0;display:flex;gap:.3rem;align-items:center"><input type="checkbox" name="who" value="${esc(x.name)}" ${sel.includes(x.name)?"checked":""}>${esc(x.name)}</label>`).join("")}</div>`;
-const CONSENT=`<details class="box" style="margin-top:.7rem"><summary><b>📄 Informativa privacy</b></summary><p style="font-size:.85rem"><b>Dati trattati:</b> nome, età, PIN (solo in forma di hash), promemoria e lista spesa. <b>Dove:</b> sul tuo dispositivo e su Google Firebase, condivisi solo con chi ha il codice famiglia. Per cancellare i dati usa “Elimina i miei dati” nel profilo.</p></details><label style="display:flex;gap:.5rem;align-items:flex-start"><input type="checkbox" name="consent" required><span>Ho letto l’informativa e acconsento al trattamento. Confermo di avere almeno 14 anni (o il consenso di un genitore).</span></label>`;
+const CONSENT=`<details class="box" style="margin-top:.65rem"><summary><b>📄 Informativa privacy</b></summary><p style="font-size:.82rem"><b>Dati trattati:</b> nome, età, PIN (solo in forma di hash), promemoria e lista spesa. <b>Dove:</b> sul tuo dispositivo e su Google Firebase, condivisi solo con chi ha il codice famiglia. Per cancellare i dati usa “Elimina i miei dati” nel profilo.</p></details><label style="display:flex;gap:.5rem;align-items:flex-start"><input type="checkbox" name="consent" required><span>Ho letto l’informativa e acconsento al trattamento. Confermo di avere almeno 14 anni (o il consenso di un genitore).</span></label>`;
 const hdr=t=>`<div class="row"><h2 style="margin:0">${t}</h2><button type="button" class="btn sm" data-act="close" aria-label="Chiudi">✕</button></div>`;
 
 function drawDlg(){
@@ -759,47 +738,32 @@ function drawDlg(){
    const list=(S.act||[]).slice(0,20);
    const lateItems=(S.items||[]).filter(i=>!i.done&&canSee(i)&&diff(i.date)<0).sort(byDate);
    const pushGranted=("Notification" in window)&&Notification.permission==="granted";
-   d.innerHTML=`${hdr("🔔 Notifiche")}<div style="margin-top:.7rem">
+   d.innerHTML=`${hdr("🔔 Notifiche")}<div style="margin-top:.65rem">
      <div class="row box"><small class="mu">${pushGranted?"Notifiche del dispositivo attive":"Attiva avvisi anche fuori dall'app"}</small><button type="button" class="btn sm pri" data-act="push">${pushGranted?"Attive ✓":"Attiva avvisi"}</button></div>
      ${lateItems.map(i=>{const dd=diff(i.date);const cls=dd>=-3?"late":"late2";return `<div class="box ${cls}"><b>${esc(i.title)}</b> · <small>${dd>=-3?"In ritardo":"Ritardo > 3g"} (${fd(i.date)})</small><br><small>👤 ${esc(WA(i).join(", "))}</small></div>`}).join("")}
      ${list.length?list.map(a=>{const isNew=a.at>prevSeenActAt&&a.by!==me().name;return `<div class="box ${isNew?"unread-act":""}"><b>${esc(a.by)}</b> ${esc(a.t)}${isNew?' · <small><b>Nuovo</b></small>':""}<br><small>${new Date(a.at).toLocaleString("it-IT")}</small></div>`}).join(""):`<div class="box mu">Nessuna notifica recente.</div>`}
    </div>`;
  }
- else if(view.t==="cats"){d.innerHTML=`${hdr("✏️ Categorie")}<div style="margin-top:.8rem">${S.cats.map(c=>`<div class="row box"><span>${esc(c.i)} <b>${esc(c.n)}</b><br><small>${withOtherSub(c.s).length} sottocategorie (incl. Altro…)</small></span><button class="btn sm" data-act="catedit" data-id="${esc(c.id)}">Modifica</button></div>`).join("")}<button class="btn pri" style="width:100%" data-act="catedit" data-id="">＋ Nuova categoria</button></div>`}
+ else if(view.t==="cats"){d.innerHTML=`${hdr("✏️ Categorie")}<div style="margin-top:.7rem">${S.cats.map(c=>`<div class="row box"><span>${esc(c.i)} <b>${esc(c.n)}</b><br><small>${withOtherSub(c.s).length} sottocategorie (incl. Altro…)</small></span><button class="btn sm" data-act="catedit" data-id="${esc(c.id)}">Modifica</button></div>`).join("")}<button class="btn pri" style="width:100%" data-act="catedit" data-id="">＋ Nuova categoria</button></div>`}
  else if(view.t==="catedit"){const c=S.cats.find(x=>x.id===view.id)||{n:"",i:"📁",c:"#b5835a",s:withOtherSub([])};
    const editableSubs=withOtherSub(c.s).filter(x=>x.n!==OTHER_SUB.n);
-   d.innerHTML=`<form data-form="catedit" data-id="${esc(c.id||"")}">${hdr(c.id?"Modifica categoria":"Nuova categoria")}<label>Nome<input name="n" required maxlength="30" value="${esc(c.n)}"></label><label>Emoji<input name="i" maxlength="8" value="${esc(c.i)}"></label><label>Colore<input name="c" type="color" value="${safeColor(c.c)}"></label><label>Sottocategorie (una per riga: emoji e nome — "Altro…" viene aggiunto in automatico)<textarea name="s" rows="7">${esc(editableSubs.map(x=>(x.i?x.i+" ":"")+x.n).join("\n"))}</textarea></label><button class="btn pri" style="width:100%;margin-top:1rem">Salva</button>${c.id&&c.id!=="varie"?`<button type="button" class="btn dng" style="width:100%;margin-top:.6rem" data-act="catdel" data-id="${esc(c.id)}">Elimina categoria</button>`:""}</form>`}
+   d.innerHTML=`<form data-form="catedit" data-id="${esc(c.id||"")}">${hdr(c.id?"Modifica categoria":"Nuova categoria")}<label>Nome<input name="n" required maxlength="30" value="${esc(c.n)}"></label><label>Emoji<input name="i" maxlength="8" value="${esc(c.i)}"></label><label>Colore<input name="c" type="color" value="${safeColor(c.c)}"></label><label>Sottocategorie (una per riga: emoji e nome — "Altro…" viene aggiunto in automatico)<textarea name="s" rows="7">${esc(editableSubs.map(x=>(x.i?x.i+" ":"")+x.n).join("\n"))}</textarea></label><button class="btn pri" style="width:100%;margin-top:.9rem">Salva</button>${c.id&&c.id!=="varie"?`<button type="button" class="btn dng" style="width:100%;margin-top:.55rem" data-act="catdel" data-id="${esc(c.id)}">Elimina categoria</button>`:""}</form>`}
  else if(view.t==="pin"){const t=S.members.find(x=>x.id===view.id)||{};
-   d.innerHTML=`<form data-form="switchpin" data-id="${esc(view.id)}">${hdr("🔒 "+esc(t.name))}<label>PIN<input name="pin" type="password" inputmode="numeric" maxlength="8" required></label><button class="btn pri" style="width:100%;margin-top:1rem">Sblocca</button></form>`;
+   d.innerHTML=`<form data-form="switchpin" data-id="${esc(view.id)}">${hdr("🔒 "+esc(t.name))}<label>PIN<input name="pin" type="password" inputmode="numeric" maxlength="8" required></label><button class="btn pri" style="width:100%;margin-top:.9rem">Sblocca</button></form>`;
  }else if(view.t==="prof"){
    d.innerHTML=`${hdr("👤 "+esc(me().name))}
-   <details class="box" style="margin-top:.75rem"><summary><b>📲 Come installare sul telefono e aggiornare</b></summary>
-     <p style="font-size:.86rem;margin:.5rem 0 .25rem"><b>iPhone / iPad (Safari):</b> tocca il pulsante <b>Condividi</b> e poi <b>Aggiungi a schermata Home</b>.</p>
-     <p style="font-size:.86rem;margin:.25rem 0"><b>Android (Chrome):</b> tocca il menu <b>⋮</b> in alto a destra e poi <b>Installa app</b> oppure <b>Aggiungi a schermata Home</b>.</p>
+   <details class="box" style="margin-top:.65rem"><summary><b>📲 Come installare sul telefono e aggiornare</b></summary>
+     <p style="font-size:.82rem;margin:.45rem 0 .25rem"><b>iPhone / iPad (Safari):</b> tocca il pulsante <b>Condividi</b> e poi <b>Aggiungi a schermata Home</b>.</p>
+     <p style="font-size:.82rem;margin:.25rem 0"><b>Android (Chrome):</b> tocca il menu <b>⋮</b> in alto a destra e poi <b>Installa app</b> oppure <b>Aggiungi a schermata Home</b>.</p>
      <small class="mu">Nota GitHub: dopo ogni modifica di <code>index.html</code>, aggiorna anche il nome/versione cache in <code>sw.js</code> per forzare l'aggiornamento sui dispositivi.</small>
    </details>
-   <form class="box" data-form="changepin" style="margin-top:.6rem"><b>Cambia PIN</b><label>Vecchio PIN<input name="opin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" required></label><label>Nuovo PIN (4-8 numeri)<input name="npin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" required></label><label>Ripeti nuovo PIN<input name="npin2" type="password" inputmode="numeric" pattern="[0-9]{4,8}" required></label><button class="btn pri" style="width:100%;margin-top:.7rem">Aggiorna PIN</button></form><button class="btn" style="width:100%" data-act="logout">Esci</button><button class="btn dng" style="width:100%;margin-top:.6rem" data-act="wipe">Elimina i miei dati da questo dispositivo</button>`;
+   <form class="box" data-form="changepin" style="margin-top:.55rem"><b>Cambia PIN</b><label>Vecchio PIN<input name="opin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" required></label><label>Nuovo PIN (4-8 numeri)<input name="npin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" required></label><label>Ripeti nuovo PIN<input name="npin2" type="password" inputmode="numeric" pattern="[0-9]{4,8}" required></label><button class="btn pri" style="width:100%;margin-top:.65rem">Aggiorna PIN</button></form><button class="btn" style="width:100%" data-act="logout">Esci</button><button class="btn dng" style="width:100%;margin-top:.55rem" data-act="wipe">Elimina i miei dati da questo dispositivo</button>`;
  }else{
    const it=S.items.find(i=>i.id===view.id)||{cat:"bollette",title:"",date:view.pd||off(1),note:"",time:"",who:[me().name],rep:"none",sub:OTHER_SUB.n};
    const curCat=cat(it.cat);
-   const catWheelList=S.cats.map(x=>({value:x.id,label:(x.i?x.i+" ":"")+x.n}));
-   const subList=subWheelItems(curCat.id);
-   const initSub=subList.some(x=>x.value===(it.sub||""))?(it.sub||OTHER_SUB.n):OTHER_SUB.n;
    d.innerHTML=`<form data-form="item" data-id="${esc(it.id||"")}">${hdr(it.id?"Modifica":"Nuovo promemoria")}
-   <input type="hidden" name="cat" value="${esc(curCat.id)}">
-   <input type="hidden" name="sub" value="${esc(initSub)}">
-   <div class="wheel-grid">
-     <div>
-       <span class="cat-lbl" style="display:block">Rotella Categoria</span>
-       ${wheelHtml("cat",catWheelList,curCat.id,curCat.c)}
-     </div>
-     <div>
-       <span class="cat-lbl" style="display:block">Rotella Sottocategoria</span>
-       <div class="wheel-wrap" data-role="sub-wrap" style="--wcol:${safeColor(curCat.c)}">
-         ${wheelHtml("sub",subList,initSub,curCat.c).replace(/^<div class="wheel-wrap"[^>]*>|<\/div>$/g,"")}
-       </div>
-     </div>
-   </div>
+   <label>Categoria<select name="cat">${S.cats.map(x=>`<option value="${esc(x.id)}" ${x.id===curCat.id?"selected":""}>${esc((x.i?x.i+" ":"")+x.n)}</option>`).join("")}</select></label>
+   <label>Sottocategoria<select name="sub">${subOptions(curCat.id,it.sub)}</select></label>
    <label>Titolo<input name="title" required maxlength="80" value="${esc(it.title)}"></label>
    <label>Data<input name="date" type="date" required value="${esc(it.date)}"></label>
    <div class="quick-dates" role="group" aria-label="Scelte rapide data">
@@ -812,12 +776,8 @@ function drawDlg(){
    <label>Nota<input name="note" maxlength="60" value="${esc(it.note||"")}"></label>
    <label>Per chi</label>${WB(WA(it))}
    <label>Ripetizione<select name="rep">${Object.entries(REP).map(([k,v])=>`<option value="${k}" ${k===it.rep?"selected":""}>${v}</option>`).join("")}</select></label>
-   <button class="btn pri" style="width:100%;margin-top:.75rem">Salva ✓</button>
-   ${it.id?`<button type="button" class="btn dng" style="width:100%;margin-top:.45rem" data-act="del" data-id="${esc(it.id)}">Elimina</button>`:""}</form>`;
-   setTimeout(()=>{
-     syncWheelSelection(d.querySelector('.wheel-col[data-wheel="cat"]'),curCat.id);
-     syncWheelSelection(d.querySelector('.wheel-col[data-wheel="sub"]'),initSub);
-   },10);
+   <button class="btn pri" style="width:100%;margin-top:.7rem">Salva ✓</button>
+   ${it.id?`<button type="button" class="btn dng" style="width:100%;margin-top:.42rem" data-act="del" data-id="${esc(it.id)}">Elimina</button>`:""}</form>`;
  }
 }
 function openDlg(v){view=v;drawDlg();if(!$("dlg").open)$("dlg").showModal()}
@@ -831,16 +791,16 @@ function gate(){
  const stayHtml=`<label class="stay-row"><input type="checkbox" name="stay" ${stayChecked?"checked":""}><span>Resta connesso su questo dispositivo</span></label>`;
 
  if(mode==="create"){
-   g.innerHTML=`<div class="w">${logoHtml}<h1 style="text-align:center">Crea la tua famiglia</h1><p class="mu" style="text-align:center">Imposta il tuo accesso da amministratore e il codice famiglia.</p>
+   g.innerHTML=`<div class="w">${logoHtml}<h1 style="text-align:center">Crea la tua famiglia</h1><p class="mu" style="text-align:center">Imposta il tuo account amministratore e il codice univoco della famiglia.</p>
    <form data-form="greg">
      <label>Nome utente<input name="nm" required maxlength="30" autocomplete="username"></label>
      <label>Età<input name="ag" type="number" min="14" max="95" required></label>
      <label>PIN (4-8 numeri)<input name="pin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" autocomplete="new-password" required></label>
      <label>Ripeti PIN<input name="pin2" type="password" inputmode="numeric" pattern="[0-9]{4,8}" autocomplete="new-password" required></label>
-     <label>Codice famiglia univoco (facoltativo — lascialo vuoto per generarne uno)<input name="code" maxlength="26" placeholder="Es. CASA-ROSSI" autocapitalize="characters" style="text-transform:uppercase"></label>
+     <label>Codice famiglia univoco (opzionale — vuoto = generato in automatico)<input name="code" maxlength="26" placeholder="Es. CASA-ROSSI" autocapitalize="characters" style="text-transform:uppercase"></label>
      ${stayHtml}
      ${CONSENT}
-     <button class="btn pri" style="width:100%;margin-top:1rem">Crea famiglia</button>
+     <button class="btn pri" style="width:100%;margin-top:.9rem">Crea famiglia</button>
    </form>
    <div class="sub-actions"><button type="button" class="btn" data-act="gmode" data-mode="login">← Torna a Entra</button></div></div>`;
    g.hidden=false;
@@ -848,16 +808,16 @@ function gate(){
  }
 
  if(mode==="join"){
-   g.innerHTML=`<div class="w">${logoHtml}<h1 style="text-align:center">Usa codice invito</h1><p class="mu" style="text-align:center">Inserisci il codice famiglia e crea il tuo nome e PIN.</p>
+   g.innerHTML=`<div class="w">${logoHtml}<h1 style="text-align:center">Entra con codice famiglia</h1><p class="mu" style="text-align:center">Inserisci il codice univoco della famiglia per unirti o rientrare.</p>
    <form data-form="join">
      <label>Codice famiglia<input name="code" value="${esc(invCode)}" required maxlength="26" minlength="4" autocapitalize="characters" style="text-transform:uppercase"></label>
      <label>Nome utente<input name="nm" required maxlength="30" autocomplete="username"></label>
-     <label>Età<input name="ag" type="number" min="14" max="95" required></label>
+     <label>Età (se nuovo membro)<input name="ag" type="number" min="14" max="95"></label>
      <label>PIN (4-8 numeri)<input name="pin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" autocomplete="new-password" required></label>
-     <label>Ripeti PIN<input name="pin2" type="password" inputmode="numeric" pattern="[0-9]{4,8}" autocomplete="new-password" required></label>
+     <label>Ripeti PIN (se nuovo membro)<input name="pin2" type="password" inputmode="numeric" pattern="[0-9]{4,8}" autocomplete="new-password"></label>
      ${stayHtml}
      ${CONSENT}
-     <button class="btn pri" style="width:100%;margin-top:1rem">Conferma ed entra ✓</button>
+     <button class="btn pri" style="width:100%;margin-top:.9rem">Unisciti ed entra ✓</button>
    </form>
    <div class="sub-actions"><button type="button" class="btn" data-act="gmode" data-mode="login">← Torna a Entra</button></div></div>`;
    g.hidden=false;
@@ -865,14 +825,15 @@ function gate(){
  }
 
  if(mode==="reset"){
-   g.innerHTML=`<div class="w">${logoHtml}<h1 style="text-align:center">Reimposta PIN</h1><p class="mu" style="text-align:center">Associa il tuo nome utente al codice famiglia e imposta un nuovo PIN.</p>
+   g.innerHTML=`<div class="w">${logoHtml}<h1 style="text-align:center">Reimposta PIN</h1><p class="mu" style="text-align:center">Inserisci codice famiglia, nome utente e nuovo PIN. Serve il PIN dell'amministratore.</p>
    <form data-form="resetpin">
      <label>Codice famiglia<input name="code" value="${esc(invCode)}" required maxlength="26" minlength="4" autocapitalize="characters" style="text-transform:uppercase"></label>
      <label>Nome utente<input name="nm" required maxlength="30" autocomplete="username"></label>
+     <label>PIN amministratore<input name="apin" type="password" inputmode="numeric" maxlength="8" required></label>
      <label>Nuovo PIN (4-8 numeri)<input name="npin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" autocomplete="new-password" required></label>
      <label>Ripeti nuovo PIN<input name="npin2" type="password" inputmode="numeric" pattern="[0-9]{4,8}" autocomplete="new-password" required></label>
      ${stayHtml}
-     <button class="btn pri" style="width:100%;margin-top:1rem">Reimposta ed entra ✓</button>
+     <button class="btn pri" style="width:100%;margin-top:.9rem">Reimposta ed entra ✓</button>
    </form>
    <div class="sub-actions"><button type="button" class="btn" data-act="gmode" data-mode="login">← Torna a Entra</button></div></div>`;
    g.hidden=false;
@@ -883,20 +844,20 @@ function gate(){
    clearTimeout(welcomeCheckTimer);
    const savedUser=S.reg&&S.members&&S.members.length?me():null;
    const quickBtn=savedUser&&savedUser.name
-     ?`<div class="box" style="margin-bottom:.75rem;text-align:center"><small class="mu">Accesso salvato sul dispositivo</small><button type="button" class="btn pri" style="width:100%;margin-top:.45rem" data-act="quick_stay">⚡ Resta connesso · Entra come ${esc(savedUser.name)}</button></div>`
+     ?`<div class="box" style="margin-bottom:.7rem;text-align:center"><small class="mu">Accesso salvato su questo dispositivo</small><button type="button" class="btn pri" style="width:100%;margin-top:.42rem" data-act="quick_stay">⚡ Resta connesso · Entra come ${esc(savedUser.name)}</button></div>`
      :"";
-   g.innerHTML=`<div class="w">${logoHtml}<h1 style="text-align:center">Accedi a Family Life</h1><p class="mu" style="text-align:center">Inserisci nome utente e PIN per entrare, oppure resta connesso.</p>
+   g.innerHTML=`<div class="w">${logoHtml}<h1 style="text-align:center">Accedi a Family Life</h1><p class="mu" style="text-align:center">Inserisci nome utente e PIN oppure usa il codice famiglia.</p>
    ${quickBtn}
    <form data-form="glogin">
      <label>Nome utente<input name="nm" value="${esc(savedUser&&savedUser.name||"")}" required maxlength="30" autocomplete="username"></label>
      <label>PIN<input name="pin" type="password" inputmode="numeric" maxlength="8" autocomplete="current-password" required></label>
      ${stayHtml}
-     <button class="btn pri" style="width:100%;margin-top:.85rem">Entra</button>
+     <button class="btn pri" style="width:100%;margin-top:.8rem">Entra</button>
    </form>
-   <div style="text-align:center;margin-top:.35rem"><button type="button" class="link-btn" data-act="gmode" data-mode="reset">Hai dimenticato il PIN? Reimposta PIN</button></div>
+   <div style="text-align:center;margin-top:.32rem"><button type="button" class="link-btn" data-act="gmode" data-mode="reset">Hai dimenticato il PIN? Reimposta PIN</button></div>
    <div class="sub-actions">
      <button type="button" class="btn sec" data-act="gmode" data-mode="create">Crea la tua famiglia</button>
-     <button type="button" class="btn" data-act="gmode" data-mode="join">Usa codice invito</button>
+     <button type="button" class="btn" data-act="gmode" data-mode="join">Entra con codice famiglia</button>
    </div></div>`;
    g.hidden=false;
  }else{
@@ -916,45 +877,8 @@ function switchTab(id){
  $("fab").hidden=tab!=="a";
 }
 
-const wheelScrollTimers=new WeakMap();
-document.addEventListener("scroll",e=>{
- const col=e.target&&e.target.closest&&e.target.closest(".wheel-col");
- if(!col)return;
- clearTimeout(wheelScrollTimers.get(col));
- const t=setTimeout(()=>{
-   const opts=[...col.querySelectorAll(".wheel-item")];
-   if(!opts.length)return;
-   const center=col.scrollTop+col.clientHeight/2;
-   let best=opts[0],bestDist=Infinity;
-   opts.forEach(o=>{
-     const d=Math.abs((o.offsetTop+o.clientHeight/2)-center);
-     if(d<bestDist){bestDist=d;best=o}
-   });
-   const form=col.closest("form");
-   const field=col.dataset.wheel;
-   if(form&&field&&best){
-     const hidden=form.querySelector(`input[type="hidden"][name="${field}"]`);
-     if(hidden&&hidden.value!==best.dataset.wheelVal){
-       setFormWheelValue(form,field,best.dataset.wheelVal);
-     }else{
-       syncWheelSelection(col,best.dataset.wheelVal);
-     }
-   }
- },90);
- wheelScrollTimers.set(col,t);
-},true);
-
 let busy=false;
 document.addEventListener("click",async e=>{
- const wItem=e.target.closest(".wheel-item");
- if(wItem){
-   const col=wItem.closest(".wheel-col");
-   const form=wItem.closest("form");
-   if(col&&form&&col.dataset.wheel){
-     setFormWheelValue(form,col.dataset.wheel,wItem.dataset.wheelVal);
-   }
-   return;
- }
  const t=e.target.closest("[data-act]");
  if(!t){if(e.target===$("dlg")){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close()}return}
  const a=t.dataset.act,id=t.dataset.id;
@@ -980,12 +904,23 @@ document.addEventListener("click",async e=>{
    const removed=S.shop.filter(x=>(x.listId||S.lists[0].id)===lid&&x.done);
    if(!removed.length)return toast("Nessun articolo preso da pulire");
    const remIds=new Set(removed.map(x=>x.id));
-   S.shop=S.shop.filter(x=>!remIds.has(x.id));
+   S.shop=S.shop.filter(x=>!remIds.has(x.id));tomb([...remIds]);
    save();render();
    toast("Articoli presi ripuliti ✓",()=>{
-     S.shop=[...removed,...S.shop];
+     S.shop=[...removed.map(x=>({...x,id:uid("s"),modAt:Date.now()})),...S.shop];
      save();render();toast("Ripristinati ✓");
    });
+ }
+ else if(a==="rem_member"){
+   if(!isAdmin())return toast("Solo l'amministratore può rimuovere un familiare");
+   if(id===S.owner||id===me().id)return toast("Non puoi rimuovere l'amministratore");
+   const target=S.members.find(m=>m.id===id);
+   if(!target)return;
+   if(!confirm(`Rimuovere "${target.name}" dalla famiglia?`))return;
+   S.members=S.members.filter(m=>m.id!==id);
+   logAct("ha rimosso "+target.name+" dalla famiglia");
+   save();render();
+   toast(target.name+" rimosso ✓");
  }
  else if(a==="quick_stay"){
    if(!S.reg||!S.members.length)return toast("Nessun profilo salvato sul dispositivo");
@@ -995,7 +930,7 @@ document.addEventListener("click",async e=>{
    save(true);
    if(S.code&&window.FL_SYNC)window.FL_SYNC.bind(S.code);
    render();gate();
-   toast("Accesso mantenuto · Bentornato/a "+m.name+"!");
+   toast("Bentornato/a "+m.name+"!");
  }
  else if(a==="confirm_home")confirmHomeNotice();
  else if(a==="gmode"){gateMode=t.dataset.mode||"login";gate()}
@@ -1111,7 +1046,7 @@ document.addEventListener("click",async e=>{
      else{
        const snap={...x};
        S.shop=S.shop.filter(s=>s.id!==id);save();render();
-       toast("Rimosso dalla lista",()=>{S.shop.unshift({...snap,modAt:Date.now()});save();render()});
+       toast("Rimosso dalla lista",()=>{S.shop.unshift({...snap,id:uid("s"),modAt:Date.now()});save();render()});
      }
    }
  }
@@ -1131,10 +1066,17 @@ document.addEventListener("click",async e=>{
      });
    }
  }
- else if(a==="sdel"){S.shop=S.shop.filter(s=>s.id!==id);save();render()}
+ else if(a==="sdel"){S.shop=S.shop.filter(s=>s.id!==id);tomb([id]);save();render()}
 });
 
-document.addEventListener("change",e=>{const t=e.target;if(t.name==="cat"&&t.form&&t.form.dataset.form==="item")setFormWheelValue(t.form,"cat",t.value)});
+document.addEventListener("change",e=>{
+ const t=e.target;
+ if(t.name==="cat"&&t.form&&t.form.dataset.form==="item"){
+   const subSel=t.form.querySelector('select[name="sub"]');
+   if(subSel)subSel.innerHTML=subOptions(t.value,OTHER_SUB.n);
+ }
+});
+
 document.addEventListener("submit",async e=>{
  e.preventDefault();if(busy)return;
  const f=e.target,fd_=new FormData(f),d=Object.fromEntries(fd_),k=f.dataset.form;busy=true;
@@ -1144,30 +1086,32 @@ document.addEventListener("submit",async e=>{
    if(k==="item"){
      const who=fd_.getAll("who"),id=f.dataset.id||uid("i");
      const catVal=d.cat||"bollette";
-     const allowedSubs=subWheelItems(catVal).map(x=>x.value);
+     const allowedSubs=withOtherSub(cat(catVal).s).map(x=>x.n);
      const subVal=allowedSubs.includes(d.sub)?d.sub:OTHER_SUB.n;
      const v={cat:catVal,sub:subVal,amt:Math.max(0,parseFloat(String(d.amt||"").replace(",","."))||0),title:d.title.trim(),date:d.date,time:d.time||"",note:(d.note||"").trim(),who:who.length?who:[me().name],rep:REP[d.rep]?d.rep:"none",modAt:Date.now()};
      let it=S.items.find(i=>i.id===id);
      if(it){if(!canSee(it))return;Object.assign(it,v)}else{it={id,done:false,...v};S.items.unshift(it)}
      logAct((f.dataset.id?"ha aggiornato: ":"ha aggiunto: ")+it.title);
-     save();render();$("dlg").close();toast("Salvato ✓");downloadIcs(it);
+     save();render();$("dlg").close();toast("Salvato ✓");
    }else if(k==="changecode"){
      if(!isAdmin())return;
      const nextCode=normCode(d.newcode||"");
      if(!CODE_RE.test(nextCode))return toast("Codice famiglia non valido (4-26 caratteri: A-Z, 0-9, -)");
      if(nextCode===S.code)return toast("Il codice famiglia è già questo");
-     if(!window.FL_SYNC)return toast("Cloud non pronto: riprova tra un attimo");
-     if(await window.FL_SYNC.pull(nextCode))return toast("Questo codice famiglia è già in uso");
      const oldCode=S.code;
+     if(window.FL_SYNC){const ex=await window.FL_SYNC.pull(nextCode).catch(()=>null);if(ex)return toast("Codice famiglia già in uso")}
      S.code=nextCode;
      S.updatedAt=Date.now();
      logAct("ha aggiornato il codice famiglia in "+nextCode);
      save(true);
-     await window.FL_SYNC.push(S);
-     if(window.FL_SYNC.remove&&oldCode)await window.FL_SYNC.remove(oldCode).catch(()=>{});
-     window.FL_SYNC.bind(nextCode);
      render();
      toast("Nuovo codice famiglia salvato: "+nextCode);
+     if(window.FL_SYNC){
+       window.FL_SYNC.push(S).then(()=>{
+         if(window.FL_SYNC.remove&&oldCode)window.FL_SYNC.remove(oldCode).catch(()=>{});
+         window.FL_SYNC.bind(nextCode);
+       }).catch(()=>{});
+     }
    }else if(k==="newlist"){
      ensureLists();
      const lName=String(d.lname||"").trim().slice(0,36);
@@ -1180,7 +1124,7 @@ document.addEventListener("submit",async e=>{
      save();render();f.reset();
      toast("Lista creata e notificata ✓");
      notify("Family Life",(me().name||"Familiare")+" "+msg);
-   }else if(k==="catedit"){if(!isAdmin())return;const id=f.dataset.id,o={n:d.n.trim(),i:(d.i||"📁").trim().slice(0,8),c:safeColor(d.c),s:subs(d.s||"")},c=S.cats.find(x=>x.id===id);
+   }else if(k==="catedit"){if(!isAdmin())return;const id=f.dataset.id,o={n:d.n.trim(),i:(d.i||"📁").trim().slice(0,8),c:safeColor(d.c),s:subs(d.s||""),modAt:Date.now()},c=S.cats.find(x=>x.id===id);
      if(c)Object.assign(c,o);else{const v=S.cats.findIndex(x=>x.id==="varie");S.cats.splice(v<0?S.cats.length:v,0,{id:uid("x"),...o})}
      save();render();openDlg({t:"cats"});toast("Categoria salvata ✓")
    }else if(k==="shop"){
@@ -1192,11 +1136,11 @@ document.addEventListener("submit",async e=>{
      save();render();f.reset();
    }else if(k==="switchpin"){
      const t=S.members.find(x=>x.id===f.dataset.id);if(!t)return;
-     if(!(await checkPin(d.pin,t.pin)))return toast("PIN errato");
+     if(!(await guardedCheck(d.pin,t.pin)))return toast("PIN errato");
      S.me=t.id;save(true);render();$("dlg").close();
    }else if(k==="changepin"){
      const m=S.members.find(x=>x.id===me().id);if(!m)return;
-     if(!(await checkPin(d.opin||"",m.pin)))return toast("Vecchio PIN errato");
+     if(!(await guardedCheck(d.opin||"",m.pin)))return toast("Vecchio PIN errato");
      if(!PIN_RE.test(d.npin||""))return toast("Il nuovo PIN deve avere 4-8 numeri");
      if(d.npin!==d.npin2)return toast("I due nuovi PIN non coincidono");
      m.pin=await hashPin(d.npin);logAct("ha aggiornato il proprio PIN");save();render();$("dlg").close();toast("PIN aggiornato ✓");
@@ -1205,64 +1149,91 @@ document.addEventListener("submit",async e=>{
      if(!PIN_RE.test(d.pin||""))return toast("Il PIN deve avere 4-8 numeri");
      if(d.pin!==d.pin2)return toast("I due PIN non coincidono");
      if(S.members.some(x=>x.name.toLowerCase()===nm.toLowerCase()))return toast("Nome già usato");
-     S.members.push({id:uid("m"),name:nm,age:ag,pin:await hashPin(d.pin)});save();render();toast("Familiare aggiunto ✓");
+     S.members.push({id:uid("m"),name:nm,age:ag,pin:await hashPin(d.pin)});
+     logAct("ha aggiunto "+nm+" alla famiglia");
+     save();render();f.reset();toast("Familiare aggiunto ✓");
    }else if(k==="greg"){
      if(!PIN_RE.test(d.pin||""))return toast("Il PIN deve avere 4-8 numeri");
      if(d.pin!==d.pin2)return toast("I due PIN non coincidono");
      const customCode=normCode(d.code||"");
      const code=customCode||newCode();
      if(!CODE_RE.test(code))return toast("Codice famiglia non valido (4-26 caratteri: lettere, numeri o -)");
-     if(!window.FL_SYNC)return toast("Cloud non pronto: riprova tra un attimo");
-     if(await window.FL_SYNC.pull(code))return toast(customCode?"Questo codice famiglia è già in uso, scegline un altro":"Collisione codice, riprova");
+     if(window.FL_SYNC){const ex=await window.FL_SYNC.pull(code).catch(()=>null);if(ex)return toast("Codice famiglia già in uso: scegline un altro")}
      const m={id:uid("m"),name:nm,age:ag,pin:await hashPin(d.pin)};
      Object.assign(S,seed(),{code,members:[m],owner:m.id,me:m.id,reg:true,out:false,stay:stayVal,consentAt:Date.now(),fsIdx:S.fsIdx??1,themeMode:S.themeMode||"auto",seenActAt:Date.now()});
      setSessionActive(true);
      gateMode="login";
-     save();await window.FL_SYNC.push(S);window.FL_SYNC.bind(code);render();gate();toast("Famiglia creata ✓ · Codice: "+code);
+     save();render();gate();
+     toast("Famiglia creata ✓ · Codice: "+code);
+     if(window.FL_SYNC){
+       window.FL_SYNC.push(S).then(()=>window.FL_SYNC.bind(code)).catch(()=>{});
+     }
    }else if(k==="join"){
      const code=normCode(d.code||"");
      if(!CODE_RE.test(code))return toast("Codice famiglia non valido");
      if(!PIN_RE.test(d.pin||""))return toast("Il PIN deve avere 4-8 numeri");
-     if(d.pin!==d.pin2)return toast("I due PIN non coincidono");
-     if(!window.FL_SYNC)return toast("Cloud non pronto: riprova tra un attimo");
-     const rem=await window.FL_SYNC.pull(code);
-     if(!rem)return toast("Codice famiglia non trovato");
-     const base=Object.assign(seed(),pick(rem));
-     if(base.members.some(x=>x.name.toLowerCase()===nm.toLowerCase()))return toast("Nome già usato in famiglia");
-     const m={id:uid("m"),name:nm,age:ag,pin:await hashPin(d.pin)};
-     base.members.push(m);
-     S=Object.assign(base,{code,me:m.id,reg:true,out:false,stay:stayVal,consentAt:Date.now(),fsIdx:S.fsIdx??1,themeMode:S.themeMode||"auto",seenActAt:Date.now()});
+     let rem=null;
+     if(window.FL_SYNC){
+       try{rem=await window.FL_SYNC.pull(code)}catch(_){}
+     }
+     if(!rem&&S.code!==code)return toast("Famiglia non trovata o offline: riprova");
+     const base=rem?Object.assign(seed(),pick(rem)):(S.code===code?Object.assign(seed(),pick(S)):Object.assign(seed(),{code}));
+     const existing=base.members.find(x=>x.name.toLowerCase()===nm.toLowerCase());
+     if(existing){
+       if(!(await guardedCheck(d.pin,existing.pin)))return toast("Nome già presente in famiglia: inserisci il PIN corretto");
+       S=Object.assign(base,{code,me:existing.id,owner:base.owner||existing.id,reg:true,out:false,stay:stayVal,consentAt:S.consentAt||Date.now(),fsIdx:S.fsIdx??1,themeMode:S.themeMode||"auto",seenActAt:Date.now()});
+     }else{
+       if(d.pin2&&d.pin!==d.pin2)return toast("I due PIN non coincidono");
+       const m={id:uid("m"),name:nm,age:ag,pin:await hashPin(d.pin)};
+       base.members.push(m);
+       if(!base.owner)base.owner=m.id;
+       base.act=[{k:uid("a"),by:nm,t:"si è unito alla famiglia",at:Date.now()},...(base.act||[])].slice(0,30);
+       S=Object.assign(base,{code,me:m.id,reg:true,out:false,stay:stayVal,consentAt:Date.now(),fsIdx:S.fsIdx??1,themeMode:S.themeMode||"auto",seenActAt:Date.now()});
+     }
      setSessionActive(true);
      gateMode="login";
      try{history.replaceState(null,"",location.pathname)}catch(x){}
-     save();window.FL_SYNC.bind(code);render();gate();toast("Benvenuto/a "+nm+"!");
+     save();render();gate();
+     toast("Benvenuto/a "+nm+"!");
+     if(window.FL_SYNC){
+       window.FL_SYNC.push(S).then(()=>window.FL_SYNC.bind(code)).catch(()=>{});
+     }
    }else if(k==="resetpin"){
      const code=normCode(d.code||"");
      if(!CODE_RE.test(code))return toast("Codice famiglia non valido");
      if(!PIN_RE.test(d.npin||""))return toast("Il nuovo PIN deve avere 4-8 numeri");
      if(d.npin!==d.npin2)return toast("I due nuovi PIN non coincidono");
-     if(!window.FL_SYNC)return toast("Cloud non pronto: riprova tra un attimo");
-     const rem=await window.FL_SYNC.pull(code);
-     if(!rem)return toast("Codice famiglia non trovato");
-     const base=Object.assign(seed(),pick(rem));
+     let rem=null;
+     if(window.FL_SYNC){
+       try{rem=await window.FL_SYNC.pull(code)}catch(_){}
+     }
+     const base=rem?Object.assign(seed(),pick(rem)):(S.code===code?Object.assign(seed(),pick(S)):null);
+     if(!base||!base.members.length)return toast("Famiglia non trovata: verifica il codice famiglia");
      const idx=base.members.findIndex(x=>x.name.toLowerCase()===nm.toLowerCase());
      if(idx<0)return toast("Nome utente non trovato in questa famiglia");
+     const adm=base.members.find(x=>x.id===base.owner);
+     if(!adm)return toast("Amministratore non trovato");
+     if(base.members[idx].id===base.owner)return toast("Per l'amministratore usa Profilo → Cambia PIN");
+     if(!(await guardedCheck(d.apin||"",adm.pin)))return toast("PIN amministratore errato");
      base.members[idx]={...base.members[idx],pin:await hashPin(d.npin)};
      base.updatedAt=Date.now();
      base.act=[{k:uid("a"),by:base.members[idx].name,t:"ha reimpostato il proprio PIN",at:Date.now()},...(base.act||[])].slice(0,30);
      S=Object.assign(base,{code,me:base.members[idx].id,reg:true,out:false,stay:stayVal,consentAt:S.consentAt||Date.now(),fsIdx:S.fsIdx??1,themeMode:S.themeMode||"auto",seenActAt:Date.now()});
      setSessionActive(true);
      gateMode="login";
-     save();await window.FL_SYNC.push(S);window.FL_SYNC.bind(code);render();gate();toast("PIN reimpostato ✓");
+     save();render();gate();
+     toast("PIN reimpostato ✓");
+     if(window.FL_SYNC){
+       window.FL_SYNC.push(S).then(()=>window.FL_SYNC.bind(code)).catch(()=>{});
+     }
    }else if(k==="glogin"){
-     if(window.FL_SYNC&&S.code){const rem=await window.FL_SYNC.pull(S.code);if(rem)mergeRemote(pick(rem))}
      const m=S.members.find(x=>x.name.toLowerCase()===nm.toLowerCase());
-     if(!m||!(await checkPin(d.pin,m.pin)))return toast("Nome o PIN errati");
+     if(!m||!(await guardedCheck(d.pin,m.pin)))return toast("Nome o PIN errati");
      S.me=m.id;S.reg=true;S.out=false;S.stay=stayVal;gateMode="login";
      setSessionActive(true);
      save(true);
-     if(S.code&&window.FL_SYNC)window.FL_SYNC.bind(S.code);
      render();gate();
+     if(S.code&&window.FL_SYNC)window.FL_SYNC.bind(S.code);
    }
  }catch(err){toast("Errore: "+(err&&err.message||err))}
  finally{busy=false}
@@ -1295,12 +1266,11 @@ try{
    if(unsub)unsub();active=c;setSt("sincronizzato");
    unsub=onSnapshot(ref(c),snap=>{
      if(!snap.exists())return;const d=snap.data();
-     if(d.updatedAt&&S.updatedAt&&d.updatedAt<=S.updatedAt)return;
      const prev=S.act[0]&&S.act[0].k;remoteLock=true;
      try{
        mergeRemote(pick(d));
        if(S.reg&&S.members.length&&!S.members.some(m=>m.id===S.me)){S.me="";S.out=true;setSessionActive(false);gate()}
-       purge();save(true);render();
+       purge();save(true);remoteRender=true;render();remoteRender=false;
        if(Date.now()-openedAt<15000)scheduleWelcomeCheck(Math.max(1000,15000-(Date.now()-openedAt)));
      }finally{remoteLock=false}
      const top=S.act[0];
@@ -1314,7 +1284,7 @@ try{
  }
  window.FL_SYNC={bind,pull,push:async st=>{
    const c=st.code;if(!c)return;
-   await setDoc(ref(c),{code:c,owner:st.owner,members:st.members,items:st.items,shop:st.shop,lists:st.lists,activeListId:st.activeListId,cats:st.cats,pay:st.pay,trash:st.trash,act:st.act.slice(0,30),updatedAt:st.updatedAt||Date.now()},{merge:true});
+   await setDoc(ref(c),{code:c,owner:st.owner,members:st.members,items:st.items,shop:st.shop,lists:st.lists,activeListId:st.activeListId,cats:st.cats,pay:st.pay,trash:st.trash,gone:st.gone||[],act:st.act.slice(0,30),updatedAt:st.updatedAt||Date.now()},{merge:true});
    setSt("sincronizzato");
  },remove:async oldCode=>{
    const oc=String(oldCode||"").toUpperCase();
